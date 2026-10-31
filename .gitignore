@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.data/
+.env
+*.log
+apps/web/node_modules/.tmp/
+e2e/report/
+e2e/results/
+e2e/videos/

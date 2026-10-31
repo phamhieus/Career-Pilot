@@ -1,0 +1,1583 @@
+[
+  {
+    "id": "aws-saa",
+    "name": "AWS Certified Solutions Architect – Associate",
+    "shortName": "AWS SAA",
+    "vendor": "AWS",
+    "code": "SAA-C03",
+    "category": "Cloud",
+    "level": "Associate",
+    "aliases": [
+      "AWS SAA",
+      "SAA-C03",
+      "SAA C03",
+      "AWS Solution Architect",
+      "AWS Solutions Architect",
+      "AWS Solutions Architect Associate",
+      "AWS Certified Solutions Architect"
+    ],
+    "officialUrl": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+  },
+  {
+    "id": "aws-ccp",
+    "name": "AWS Certified Cloud Practitioner",
+    "shortName": "AWS CCP",
+    "vendor": "AWS",
+    "code": "CLF-C02",
+    "category": "Cloud",
+    "level": "Foundational",
+    "aliases": [
+      "AWS CCP",
+      "CLF-C02",
+      "AWS Cloud Practitioner",
+      "Cloud Practitioner"
+    ],
+    "officialUrl": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+  },
+  {
+    "id": "aws-dop",
+    "name": "AWS Certified DevOps Engineer – Professional",
+    "shortName": "AWS DevOps Pro",
+    "vendor": "AWS",
+    "code": "DOP-C02",
+    "category": "DevOps",
+    "level": "Professional",
+    "aliases": [
+      "AWS DevOps Pro",
+      "DOP-C02",
+      "AWS DevOps Engineer",
+      "AWS Certified DevOps Engineer",
+      "AWS DevOps Engineer Professional"
+    ],
+    "officialUrl": "https://aws.amazon.com/certification/certified-devops-engineer-professional/"
+  },
+  {
+    "id": "az-104",
+    "name": "Microsoft Certified: Azure Administrator Associate",
+    "shortName": "AZ-104",
+    "vendor": "Microsoft",
+    "code": "AZ-104",
+    "category": "Cloud",
+    "level": "Associate",
+    "aliases": [
+      "AZ-104",
+      "AZ104",
+      "Azure Administrator",
+      "Azure Administrator Associate",
+      "Azure Admin"
+    ],
+    "officialUrl": "https://learn.microsoft.com/credentials/certifications/azure-administrator/"
+  },
+  {
+    "id": "az-900",
+    "name": "Microsoft Certified: Azure Fundamentals",
+    "shortName": "AZ-900",
+    "vendor": "Microsoft",
+    "code": "AZ-900",
+    "category": "Cloud",
+    "level": "Foundational",
+    "aliases": [
+      "AZ-900",
+      "AZ900",
+      "Azure Fundamentals"
+    ],
+    "officialUrl": "https://learn.microsoft.com/credentials/certifications/azure-fundamentals/"
+  },
+  {
+    "id": "ccna",
+    "name": "Cisco Certified Network Associate",
+    "shortName": "CCNA",
+    "vendor": "Cisco",
+    "code": "200-301",
+    "category": "Networking",
+    "level": "Associate",
+    "aliases": [
+      "CCNA",
+      "200-301",
+      "CCNA 200-301",
+      "Cisco CCNA",
+      "Cisco Certified Network Associate"
+    ],
+    "officialUrl": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html"
+  },
+  {
+    "id": "ccnp-enterprise",
+    "name": "Cisco Certified Network Professional Enterprise",
+    "shortName": "CCNP Enterprise",
+    "vendor": "Cisco",
+    "code": "350-401",
+    "category": "Networking",
+    "level": "Professional",
+    "aliases": [
+      "CCNP",
+      "CCNP Enterprise",
+      "350-401",
+      "ENCOR",
+      "Cisco CCNP"
+    ],
+    "officialUrl": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccnp-enterprise/index.html"
+  },
+  {
+    "id": "cka",
+    "name": "Certified Kubernetes Administrator",
+    "shortName": "CKA",
+    "vendor": "Linux Foundation / CNCF",
+    "code": "CKA",
+    "category": "Kubernetes",
+    "level": "Professional",
+    "aliases": [
+      "CKA",
+      "Certified Kubernetes Administrator",
+      "Kubernetes Administrator"
+    ],
+    "officialUrl": "https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/"
+  },
+  {
+    "id": "ckad",
+    "name": "Certified Kubernetes Application Developer",
+    "shortName": "CKAD",
+    "vendor": "Linux Foundation / CNCF",
+    "code": "CKAD",
+    "category": "Kubernetes",
+    "level": "Associate",
+    "aliases": [
+      "CKAD",
+      "Certified Kubernetes Application Developer",
+      "Kubernetes Application Developer"
+    ],
+    "officialUrl": "https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/"
+  },
+  {
+    "id": "cissp",
+    "name": "Certified Information Systems Security Professional",
+    "shortName": "CISSP",
+    "vendor": "ISC2",
+    "code": "CISSP",
+    "category": "Cybersecurity",
+    "level": "Expert",
+    "aliases": [
+      "CISSP",
+      "Certified Information Systems Security Professional"
+    ],
+    "officialUrl": "https://www.isc2.org/certifications/cissp"
+  },
+  {
+    "id": "security-plus",
+    "name": "CompTIA Security+",
+    "shortName": "Security+",
+    "vendor": "CompTIA",
+    "code": "SY0-701",
+    "category": "Cybersecurity",
+    "level": "Associate",
+    "aliases": [
+      "Security+",
+      "SecurityPlus",
+      "SY0-701",
+      "CompTIA Security+",
+      "Sec+"
+    ],
+    "officialUrl": "https://www.comptia.org/certifications/security"
+  },
+  {
+    "id": "ceh",
+    "name": "Certified Ethical Hacker",
+    "shortName": "CEH",
+    "vendor": "EC-Council",
+    "code": "312-50",
+    "category": "Cybersecurity",
+    "level": "Associate",
+    "aliases": [
+      "CEH",
+      "312-50",
+      "Certified Ethical Hacker",
+      "Ethical Hacker"
+    ],
+    "officialUrl": "https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/"
+  },
+  {
+    "id": "gcp-ace",
+    "name": "Google Cloud Associate Cloud Engineer",
+    "shortName": "GCP ACE",
+    "vendor": "Google Cloud",
+    "code": "ACE",
+    "category": "Cloud",
+    "level": "Associate",
+    "aliases": [
+      "GCP ACE",
+      "Associate Cloud Engineer",
+      "Google Associate Cloud Engineer",
+      "GCP ACE Cert"
+    ],
+    "officialUrl": "https://cloud.google.com/learn/certification/cloud-engineer"
+  },
+  {
+    "id": "terraform-associate",
+    "name": "HashiCorp Certified: Terraform Associate",
+    "shortName": "Terraform Associate",
+    "vendor": "HashiCorp",
+    "code": "003",
+    "category": "DevOps",
+    "level": "Associate",
+    "aliases": [
+      "Terraform Associate",
+      "HashiCorp Terraform Associate",
+      "Terraform Cert",
+      "TA-003"
+    ],
+    "officialUrl": "https://developer.hashicorp.com/certifications/infrastructure-automation"
+  },
+  {
+    "id": "dp-203",
+    "name": "Microsoft Certified: Azure Data Engineer Associate",
+    "shortName": "DP-203",
+    "vendor": "Microsoft",
+    "code": "DP-203",
+    "category": "Data",
+    "level": "Associate",
+    "aliases": [
+      "DP-203",
+      "DP203",
+      "Azure Data Engineer",
+      "Azure Data Engineer Associate"
+    ],
+    "officialUrl": "https://learn.microsoft.com/credentials/certifications/azure-data-engineer/"
+  },
+  {
+    "id": "ai-102",
+    "name": "Microsoft Certified: Azure AI Engineer Associate",
+    "shortName": "AI-102",
+    "vendor": "Microsoft",
+    "code": "AI-102",
+    "category": "AI",
+    "level": "Associate",
+    "aliases": [
+      "AI-102",
+      "AI102",
+      "Azure AI Engineer",
+      "Azure AI Engineer Associate"
+    ],
+    "officialUrl": "https://learn.microsoft.com/credentials/certifications/azure-ai-engineer/"
+  },
+  {
+    "id": "ocp-java-17",
+    "name": "Oracle Certified Professional: Java SE 17 Developer",
+    "shortName": "OCP Java 17",
+    "vendor": "Oracle",
+    "code": "1Z0-829",
+    "category": "Software Development",
+    "level": "Professional",
+    "aliases": [
+      "OCP Java 17",
+      "1Z0-829",
+      "Java SE 17 Developer",
+      "Oracle Java Certification",
+      "OCPJP"
+    ],
+    "officialUrl": "https://education.oracle.com/oracle-certified-professional-java-se-17-developer/trackp_OCPJAV17"
+  },
+  {
+    "id": "oracle-dba-19c",
+    "name": "Oracle Database Administration 2019 Certified Professional",
+    "shortName": "Oracle DBA 19c",
+    "vendor": "Oracle",
+    "code": "1Z0-083",
+    "category": "Database",
+    "level": "Professional",
+    "aliases": [
+      "Oracle DBA 19c",
+      "1Z0-083",
+      "Oracle Database Administration 2019",
+      "OCP DBA"
+    ],
+    "officialUrl": "https://education.oracle.com/oracle-database-administration-2019-certified-professional/trackp_DBA19C"
+  },
+  {
+    "id": "pmp",
+    "name": "Project Management Professional",
+    "shortName": "PMP",
+    "vendor": "PMI",
+    "code": "PMP",
+    "category": "Project Management",
+    "level": "Professional",
+    "aliases": [
+      "PMP",
+      "Project Management Professional",
+      "PMI PMP"
+    ],
+    "officialUrl": "https://www.pmi.org/certifications/project-management-pmp"
+  },
+  {
+    "id": "psm-1",
+    "name": "Professional Scrum Master I",
+    "shortName": "PSM I",
+    "vendor": "Scrum.org",
+    "code": "PSM I",
+    "category": "Project Management",
+    "level": "Foundational",
+    "aliases": [
+      "PSM I",
+      "PSM1",
+      "Professional Scrum Master",
+      "Scrum Master Certification"
+    ],
+    "officialUrl": "https://www.scrum.org/assessments/professional-scrum-master-i-certification"
+  },
+  {
+    "id": "aws-dva",
+    "name": "AWS Certified Developer – Associate",
+    "shortName": "AWS DVA",
+    "vendor": "AWS",
+    "code": "DVA-C02",
+    "category": "Cloud",
+    "level": "Associate",
+    "aliases": [
+      "AWS DVA",
+      "DVA-C02",
+      "AWS Developer Associate",
+      "AWS Certified Developer"
+    ],
+    "officialUrl": "https://aws.amazon.com/certification/certified-developer-associate/"
+  },
+  {
+    "id": "aws-soa",
+    "name": "AWS Certified SysOps Administrator – Associate",
+    "shortName": "AWS SOA",
+    "vendor": "AWS",
+    "code": "SOA-C02",
+    "category": "Cloud",
+    "level": "Associate",
+    "aliases": [
+      "AWS SOA",
+      "SOA-C02",
+      "AWS SysOps Administrator",
+      "AWS Certified SysOps Administrator"
+    ],
+    "officialUrl": "https://aws.amazon.com/certification/certified-sysops-admin-associate/"
+  },
+  {
+    "id": "aws-sap",
+    "name": "AWS Certified Solutions Architect – Professional",
+    "shortName": "AWS SAP",
+    "vendor": "AWS",
+    "code": "SAP-C02",
+    "category": "Cloud",
+    "level": "Professional",
+    "aliases": [
+      "AWS SAP",
+      "SAP-C02",
+      "AWS Solutions Architect Professional"
+    ],
+    "officialUrl": "https://aws.amazon.com/certification/certified-solutions-architect-professional/"
+  },
+  {
+    "id": "aws-scs",
+    "name": "AWS Certified Security – Specialty",
+    "shortName": "AWS Security Specialty",
+    "vendor": "AWS",
+    "code": "SCS-C02",
+    "category": "Cybersecurity",
+    "level": "Specialty",
+    "aliases": [
+      "SCS-C02",
+      "AWS Security Specialty",
+      "AWS Certified Security"
+    ],
+    "officialUrl": "https://aws.amazon.com/certification/certified-security-specialty/"
+  },
+  {
+    "id": "aws-ans",
+    "name": "AWS Certified Advanced Networking – Specialty",
+    "shortName": "AWS ANS",
+    "vendor": "AWS",
+    "code": "ANS-C01",
+    "category": "Networking",
+    "level": "Specialty",
+    "aliases": [
+      "ANS-C01",
+      "AWS Advanced Networking",
+      "AWS Certified Advanced Networking"
+    ],
+    "officialUrl": "https://aws.amazon.com/certification/certified-advanced-networking-specialty/"
+  },
+  {
+    "id": "aws-mls",
+    "name": "AWS Certified Machine Learning – Specialty",
+    "shortName": "AWS MLS",
+    "vendor": "AWS",
+    "code": "MLS-C01",
+    "category": "AI",
+    "level": "Specialty",
+    "aliases": [
+      "MLS-C01",
+      "AWS Machine Learning Specialty",
+      "AWS Certified Machine Learning"
+    ],
+    "officialUrl": "https://aws.amazon.com/certification/certified-machine-learning-specialty/"
+  },
+  {
+    "id": "aws-dea",
+    "name": "AWS Certified Data Engineer – Associate",
+    "shortName": "AWS DEA",
+    "vendor": "AWS",
+    "code": "DEA-C01",
+    "category": "Data",
+    "level": "Associate",
+    "aliases": [
+      "DEA-C01",
+      "AWS Data Engineer Associate",
+      "AWS Certified Data Engineer"
+    ],
+    "officialUrl": "https://aws.amazon.com/certification/certified-data-engineer-associate/"
+  },
+  {
+    "id": "aws-aif",
+    "name": "AWS Certified AI Practitioner",
+    "shortName": "AWS AIF",
+    "vendor": "AWS",
+    "code": "AIF-C01",
+    "category": "AI",
+    "level": "Foundational",
+    "aliases": [
+      "AIF-C01",
+      "AWS AI Practitioner",
+      "AWS Certified AI Practitioner"
+    ],
+    "officialUrl": "https://aws.amazon.com/certification/certified-ai-practitioner/"
+  },
+  {
+    "id": "az-204",
+    "name": "Microsoft Certified: Azure Developer Associate",
+    "shortName": "AZ-204",
+    "vendor": "Microsoft",
+    "code": "AZ-204",
+    "category": "Cloud",
+    "level": "Associate",
+    "aliases": [
+      "AZ-204",
+      "AZ204",
+      "Azure Developer Associate",
+      "Azure Developer"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/"
+  },
+  {
+    "id": "az-305",
+    "name": "Microsoft Certified: Azure Solutions Architect Expert",
+    "shortName": "AZ-305",
+    "vendor": "Microsoft",
+    "code": "AZ-305",
+    "category": "Cloud",
+    "level": "Expert",
+    "aliases": [
+      "AZ-305",
+      "AZ305",
+      "Azure Solutions Architect Expert",
+      "Azure Solutions Architect"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/"
+  },
+  {
+    "id": "az-400",
+    "name": "Microsoft Certified: DevOps Engineer Expert",
+    "shortName": "AZ-400",
+    "vendor": "Microsoft",
+    "code": "AZ-400",
+    "category": "DevOps",
+    "level": "Expert",
+    "aliases": [
+      "AZ-400",
+      "AZ400",
+      "Azure DevOps Engineer Expert",
+      "Azure DevOps Engineer"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/"
+  },
+  {
+    "id": "az-500",
+    "name": "Microsoft Certified: Azure Security Engineer Associate",
+    "shortName": "AZ-500",
+    "vendor": "Microsoft",
+    "code": "AZ-500",
+    "category": "Cybersecurity",
+    "level": "Associate",
+    "aliases": [
+      "AZ-500",
+      "AZ500",
+      "Azure Security Engineer"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/"
+  },
+  {
+    "id": "az-700",
+    "name": "Microsoft Certified: Azure Network Engineer Associate",
+    "shortName": "AZ-700",
+    "vendor": "Microsoft",
+    "code": "AZ-700",
+    "category": "Networking",
+    "level": "Associate",
+    "aliases": [
+      "AZ-700",
+      "AZ700",
+      "Azure Network Engineer"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-network-engineer-associate/"
+  },
+  {
+    "id": "sc-900",
+    "name": "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
+    "shortName": "SC-900",
+    "vendor": "Microsoft",
+    "code": "SC-900",
+    "category": "Cybersecurity",
+    "level": "Foundational",
+    "aliases": [
+      "SC-900",
+      "SC900",
+      "Security Compliance and Identity Fundamentals"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/security-compliance-and-identity-fundamentals/"
+  },
+  {
+    "id": "sc-200",
+    "name": "Microsoft Certified: Security Operations Analyst Associate",
+    "shortName": "SC-200",
+    "vendor": "Microsoft",
+    "code": "SC-200",
+    "category": "Cybersecurity",
+    "level": "Associate",
+    "aliases": [
+      "SC-200",
+      "SC200",
+      "Security Operations Analyst"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/"
+  },
+  {
+    "id": "sc-300",
+    "name": "Microsoft Certified: Identity and Access Administrator Associate",
+    "shortName": "SC-300",
+    "vendor": "Microsoft",
+    "code": "SC-300",
+    "category": "Cybersecurity",
+    "level": "Associate",
+    "aliases": [
+      "SC-300",
+      "SC300",
+      "Identity and Access Administrator"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/"
+  },
+  {
+    "id": "dp-100",
+    "name": "Microsoft Certified: Azure Data Scientist Associate",
+    "shortName": "DP-100",
+    "vendor": "Microsoft",
+    "code": "DP-100",
+    "category": "AI",
+    "level": "Associate",
+    "aliases": [
+      "DP-100",
+      "DP100",
+      "Azure Data Scientist"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-scientist/"
+  },
+  {
+    "id": "dp-300",
+    "name": "Microsoft Certified: Azure Database Administrator Associate",
+    "shortName": "DP-300",
+    "vendor": "Microsoft",
+    "code": "DP-300",
+    "category": "Database",
+    "level": "Associate",
+    "aliases": [
+      "DP-300",
+      "DP300",
+      "Azure Database Administrator"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-database-administrator-associate/"
+  },
+  {
+    "id": "dp-900",
+    "name": "Microsoft Certified: Azure Data Fundamentals",
+    "shortName": "DP-900",
+    "vendor": "Microsoft",
+    "code": "DP-900",
+    "category": "Data",
+    "level": "Foundational",
+    "aliases": [
+      "DP-900",
+      "DP900",
+      "Azure Data Fundamentals"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/"
+  },
+  {
+    "id": "ai-900",
+    "name": "Microsoft Certified: Azure AI Fundamentals",
+    "shortName": "AI-900",
+    "vendor": "Microsoft",
+    "code": "AI-900",
+    "category": "AI",
+    "level": "Foundational",
+    "aliases": [
+      "AI-900",
+      "AI900",
+      "Azure AI Fundamentals"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/"
+  },
+  {
+    "id": "pl-300",
+    "name": "Microsoft Certified: Power BI Data Analyst Associate",
+    "shortName": "PL-300",
+    "vendor": "Microsoft",
+    "code": "PL-300",
+    "category": "Data",
+    "level": "Associate",
+    "aliases": [
+      "PL-300",
+      "PL300",
+      "Power BI Data Analyst"
+    ],
+    "officialUrl": "https://learn.microsoft.com/en-us/credentials/certifications/data-analyst-associate/"
+  },
+  {
+    "id": "gcp-pca",
+    "name": "Google Cloud Professional Cloud Architect",
+    "shortName": "GCP PCA",
+    "vendor": "Google Cloud",
+    "code": null,
+    "category": "Cloud",
+    "level": "Professional",
+    "aliases": [
+      "GCP Professional Cloud Architect",
+      "Professional Cloud Architect",
+      "Google Professional Cloud Architect"
+    ],
+    "officialUrl": "https://cloud.google.com/learn/certification/cloud-architect"
+  },
+  {
+    "id": "gcp-pde",
+    "name": "Google Cloud Professional Data Engineer",
+    "shortName": "GCP PDE",
+    "vendor": "Google Cloud",
+    "code": null,
+    "category": "Data",
+    "level": "Professional",
+    "aliases": [
+      "GCP Professional Data Engineer",
+      "Professional Data Engineer",
+      "Google Professional Data Engineer"
+    ],
+    "officialUrl": "https://cloud.google.com/learn/certification/data-engineer"
+  },
+  {
+    "id": "gcp-pcdoe",
+    "name": "Google Cloud Professional Cloud DevOps Engineer",
+    "shortName": "GCP DevOps",
+    "vendor": "Google Cloud",
+    "code": null,
+    "category": "DevOps",
+    "level": "Professional",
+    "aliases": [
+      "Professional Cloud DevOps Engineer",
+      "Google Cloud DevOps Engineer"
+    ],
+    "officialUrl": "https://cloud.google.com/learn/certification/cloud-devops-engineer"
+  },
+  {
+    "id": "gcp-pmle",
+    "name": "Google Cloud Professional Machine Learning Engineer",
+    "shortName": "GCP PMLE",
+    "vendor": "Google Cloud",
+    "code": null,
+    "category": "AI",
+    "level": "Professional",
+    "aliases": [
+      "Professional Machine Learning Engineer",
+      "Google Professional Machine Learning Engineer"
+    ],
+    "officialUrl": "https://cloud.google.com/learn/certification/machine-learning-engineer"
+  },
+  {
+    "id": "gcp-cdl",
+    "name": "Google Cloud Digital Leader",
+    "shortName": "GCP CDL",
+    "vendor": "Google Cloud",
+    "code": null,
+    "category": "Cloud",
+    "level": "Foundational",
+    "aliases": [
+      "Cloud Digital Leader",
+      "Google Cloud Digital Leader"
+    ],
+    "officialUrl": "https://cloud.google.com/learn/certification/cloud-digital-leader"
+  },
+  {
+    "id": "cks",
+    "name": "Certified Kubernetes Security Specialist",
+    "shortName": "CKS",
+    "vendor": "Linux Foundation",
+    "code": null,
+    "category": "Kubernetes",
+    "level": "Professional",
+    "aliases": [
+      "CKS",
+      "Kubernetes Security Specialist",
+      "Certified Kubernetes Security Specialist"
+    ],
+    "officialUrl": "https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/"
+  },
+  {
+    "id": "kcna",
+    "name": "Kubernetes and Cloud Native Associate",
+    "shortName": "KCNA",
+    "vendor": "Linux Foundation",
+    "code": null,
+    "category": "Kubernetes",
+    "level": "Foundational",
+    "aliases": [
+      "KCNA",
+      "Kubernetes and Cloud Native Associate"
+    ],
+    "officialUrl": "https://training.linuxfoundation.org/certification/kubernetes-cloud-native-associate/"
+  },
+  {
+    "id": "lfcs",
+    "name": "Linux Foundation Certified SysAdmin",
+    "shortName": "LFCS",
+    "vendor": "Linux Foundation",
+    "code": null,
+    "category": "DevOps",
+    "level": "Associate",
+    "aliases": [
+      "LFCS",
+      "Linux Foundation Certified SysAdmin",
+      "Linux Foundation Certified System Administrator"
+    ],
+    "officialUrl": "https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/"
+  },
+  {
+    "id": "vault-associate",
+    "name": "HashiCorp Certified: Vault Associate",
+    "shortName": "Vault Associate",
+    "vendor": "HashiCorp",
+    "code": null,
+    "category": "DevOps",
+    "level": "Associate",
+    "aliases": [
+      "Vault Associate",
+      "HashiCorp Vault Associate",
+      "Certified Vault Associate"
+    ],
+    "officialUrl": "https://developer.hashicorp.com/certifications/security-automation"
+  },
+  {
+    "id": "rhcsa",
+    "name": "Red Hat Certified System Administrator",
+    "shortName": "RHCSA",
+    "vendor": "Red Hat",
+    "code": "EX200",
+    "category": "DevOps",
+    "level": "Associate",
+    "aliases": [
+      "RHCSA",
+      "EX200",
+      "Red Hat Certified System Administrator"
+    ],
+    "officialUrl": "https://www.redhat.com/en/services/certification/rhcsa"
+  },
+  {
+    "id": "rhce",
+    "name": "Red Hat Certified Engineer",
+    "shortName": "RHCE",
+    "vendor": "Red Hat",
+    "code": "EX294",
+    "category": "DevOps",
+    "level": "Professional",
+    "aliases": [
+      "RHCE",
+      "EX294",
+      "Red Hat Certified Engineer"
+    ],
+    "officialUrl": "https://www.redhat.com/en/services/certification/rhce"
+  },
+  {
+    "id": "linux-plus",
+    "name": "CompTIA Linux+",
+    "shortName": "Linux+",
+    "vendor": "CompTIA",
+    "code": "XK0-005",
+    "category": "DevOps",
+    "level": "Associate",
+    "aliases": [
+      "Linux+",
+      "XK0-005",
+      "CompTIA Linux Plus"
+    ],
+    "officialUrl": "https://www.comptia.org/certifications/linux"
+  },
+  {
+    "id": "network-plus",
+    "name": "CompTIA Network+",
+    "shortName": "Network+",
+    "vendor": "CompTIA",
+    "code": "N10-009",
+    "category": "Networking",
+    "level": "Foundational",
+    "aliases": [
+      "Network+",
+      "N10-009",
+      "CompTIA Network Plus"
+    ],
+    "officialUrl": "https://www.comptia.org/certifications/network"
+  },
+  {
+    "id": "ccie-ei",
+    "name": "CCIE Enterprise Infrastructure",
+    "shortName": "CCIE EI",
+    "vendor": "Cisco",
+    "code": null,
+    "category": "Networking",
+    "level": "Expert",
+    "aliases": [
+      "CCIE",
+      "CCIE Enterprise Infrastructure",
+      "CCIE Enterprise"
+    ],
+    "officialUrl": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccie-enterprise-infrastructure/index.html"
+  },
+  {
+    "id": "ccnp-security",
+    "name": "CCNP Security",
+    "shortName": "CCNP Security",
+    "vendor": "Cisco",
+    "code": "350-701",
+    "category": "Cybersecurity",
+    "level": "Professional",
+    "aliases": [
+      "CCNP Security",
+      "350-701",
+      "SCOR 350-701"
+    ],
+    "officialUrl": "https://learningnetwork.cisco.com/s/ccnp-security"
+  },
+  {
+    "id": "cyberops-associate",
+    "name": "Cisco Certified CyberOps Associate",
+    "shortName": "CyberOps Associate",
+    "vendor": "Cisco",
+    "code": "200-201",
+    "category": "Cybersecurity",
+    "level": "Associate",
+    "aliases": [
+      "CyberOps Associate",
+      "200-201",
+      "Cisco CyberOps"
+    ],
+    "officialUrl": "https://learningnetwork.cisco.com/s/cyberops-associate"
+  },
+  {
+    "id": "cysa-plus",
+    "name": "CompTIA CySA+",
+    "shortName": "CySA+",
+    "vendor": "CompTIA",
+    "code": "CS0-003",
+    "category": "Cybersecurity",
+    "level": "Professional",
+    "aliases": [
+      "CySA+",
+      "CS0-003",
+      "CompTIA Cybersecurity Analyst"
+    ],
+    "officialUrl": "https://www.comptia.org/certifications/cybersecurity-analyst"
+  },
+  {
+    "id": "pentest-plus",
+    "name": "CompTIA PenTest+",
+    "shortName": "PenTest+",
+    "vendor": "CompTIA",
+    "code": "PT0-003",
+    "category": "Cybersecurity",
+    "level": "Professional",
+    "aliases": [
+      "PenTest+",
+      "PT0-003",
+      "CompTIA PenTest Plus"
+    ],
+    "officialUrl": "https://www.comptia.org/certifications/pentest"
+  },
+  {
+    "id": "securityx",
+    "name": "CompTIA SecurityX",
+    "shortName": "SecurityX",
+    "vendor": "CompTIA",
+    "code": "CAS-005",
+    "category": "Cybersecurity",
+    "level": "Expert",
+    "aliases": [
+      "SecurityX",
+      "CASP+",
+      "CAS-005",
+      "CompTIA Advanced Security Practitioner"
+    ],
+    "officialUrl": "https://www.comptia.org/certifications/securityx"
+  },
+  {
+    "id": "cism",
+    "name": "Certified Information Security Manager",
+    "shortName": "CISM",
+    "vendor": "ISACA",
+    "code": null,
+    "category": "Cybersecurity",
+    "level": "Expert",
+    "aliases": [
+      "CISM",
+      "Certified Information Security Manager"
+    ],
+    "officialUrl": "https://www.isaca.org/credentialing/cism"
+  },
+  {
+    "id": "cisa",
+    "name": "Certified Information Systems Auditor",
+    "shortName": "CISA",
+    "vendor": "ISACA",
+    "code": null,
+    "category": "Cybersecurity",
+    "level": "Expert",
+    "aliases": [
+      "CISA",
+      "Certified Information Systems Auditor"
+    ],
+    "officialUrl": "https://www.isaca.org/credentialing/cisa"
+  },
+  {
+    "id": "oscp",
+    "name": "OffSec Certified Professional",
+    "shortName": "OSCP",
+    "vendor": "OffSec",
+    "code": "PEN-200",
+    "category": "Cybersecurity",
+    "level": "Professional",
+    "aliases": [
+      "OSCP",
+      "PEN-200",
+      "Offensive Security Certified Professional"
+    ],
+    "officialUrl": "https://www.offsec.com/courses/pen-200/"
+  },
+  {
+    "id": "gsec",
+    "name": "GIAC Security Essentials",
+    "shortName": "GSEC",
+    "vendor": "GIAC",
+    "code": null,
+    "category": "Cybersecurity",
+    "level": "Associate",
+    "aliases": [
+      "GSEC",
+      "GIAC Security Essentials"
+    ],
+    "officialUrl": "https://www.giac.org/certifications/security-essentials-gsec/"
+  },
+  {
+    "id": "gcih",
+    "name": "GIAC Certified Incident Handler",
+    "shortName": "GCIH",
+    "vendor": "GIAC",
+    "code": null,
+    "category": "Cybersecurity",
+    "level": "Professional",
+    "aliases": [
+      "GCIH",
+      "GIAC Certified Incident Handler"
+    ],
+    "officialUrl": "https://www.giac.org/certifications/certified-incident-handler-gcih/"
+  },
+  {
+    "id": "ccsp",
+    "name": "Certified Cloud Security Professional",
+    "shortName": "CCSP",
+    "vendor": "ISC2",
+    "code": null,
+    "category": "Cybersecurity",
+    "level": "Expert",
+    "aliases": [
+      "CCSP",
+      "Certified Cloud Security Professional"
+    ],
+    "officialUrl": "https://www.isc2.org/certifications/ccsp"
+  },
+  {
+    "id": "isc2-cc",
+    "name": "ISC2 Certified in Cybersecurity",
+    "shortName": "ISC2 CC",
+    "vendor": "ISC2",
+    "code": null,
+    "category": "Cybersecurity",
+    "level": "Foundational",
+    "aliases": [
+      "ISC2 CC",
+      "Certified in Cybersecurity"
+    ],
+    "officialUrl": "https://www.isc2.org/certifications/cc"
+  },
+  {
+    "id": "databricks-dea",
+    "name": "Databricks Certified Data Engineer Associate",
+    "shortName": "Databricks DEA",
+    "vendor": "Databricks",
+    "code": null,
+    "category": "Data",
+    "level": "Associate",
+    "aliases": [
+      "Databricks Data Engineer Associate",
+      "Databricks Certified Data Engineer"
+    ],
+    "officialUrl": "https://www.databricks.com/learn/certification/data-engineer-associate"
+  },
+  {
+    "id": "databricks-mla",
+    "name": "Databricks Certified Machine Learning Associate",
+    "shortName": "Databricks MLA",
+    "vendor": "Databricks",
+    "code": null,
+    "category": "AI",
+    "level": "Associate",
+    "aliases": [
+      "Databricks Machine Learning Associate",
+      "Databricks Certified Machine Learning"
+    ],
+    "officialUrl": "https://www.databricks.com/learn/certification/machine-learning-associate"
+  },
+  {
+    "id": "snowpro-core",
+    "name": "SnowPro Core Certification",
+    "shortName": "SnowPro Core",
+    "vendor": "Snowflake",
+    "code": null,
+    "category": "Data",
+    "level": "Associate",
+    "aliases": [
+      "SnowPro Core",
+      "SnowPro"
+    ],
+    "officialUrl": "https://www.snowflake.com/certifications/"
+  },
+  {
+    "id": "tableau-desktop-specialist",
+    "name": "Tableau Desktop Specialist",
+    "shortName": "Tableau Specialist",
+    "vendor": "Tableau",
+    "code": null,
+    "category": "Data",
+    "level": "Foundational",
+    "aliases": [
+      "Tableau Desktop Specialist"
+    ],
+    "officialUrl": "https://www.tableau.com/learn/certification/desktop-specialist"
+  },
+  {
+    "id": "pcep",
+    "name": "PCEP – Certified Entry-Level Python Programmer",
+    "shortName": "PCEP",
+    "vendor": "Python Institute",
+    "code": "PCEP-30-02",
+    "category": "Software Development",
+    "level": "Foundational",
+    "aliases": [
+      "PCEP",
+      "Certified Entry-Level Python Programmer"
+    ],
+    "officialUrl": "https://pythoninstitute.org/pcep"
+  },
+  {
+    "id": "pcap",
+    "name": "PCAP – Certified Associate in Python Programming",
+    "shortName": "PCAP",
+    "vendor": "Python Institute",
+    "code": "PCAP-31-03",
+    "category": "Software Development",
+    "level": "Associate",
+    "aliases": [
+      "PCAP",
+      "Certified Associate in Python Programming"
+    ],
+    "officialUrl": "https://pythoninstitute.org/pcap"
+  },
+  {
+    "id": "salesforce-admin",
+    "name": "Salesforce Certified Administrator",
+    "shortName": "Salesforce Admin",
+    "vendor": "Salesforce",
+    "code": null,
+    "category": "Software Development",
+    "level": "Associate",
+    "aliases": [
+      "Salesforce Administrator",
+      "Salesforce Certified Administrator"
+    ],
+    "officialUrl": "https://trailhead.salesforce.com/credentials/administrator"
+  },
+  {
+    "id": "mongodb-associate-dev",
+    "name": "MongoDB Associate Developer",
+    "shortName": "MongoDB Dev",
+    "vendor": "MongoDB",
+    "code": null,
+    "category": "Database",
+    "level": "Associate",
+    "aliases": [
+      "MongoDB Associate Developer",
+      "MongoDB Certified Developer"
+    ],
+    "officialUrl": "https://learn.mongodb.com/pages/mongodb-associate-developer-exam"
+  },
+  {
+    "id": "capm",
+    "name": "Certified Associate in Project Management",
+    "shortName": "CAPM",
+    "vendor": "PMI",
+    "code": null,
+    "category": "Project Management",
+    "level": "Foundational",
+    "aliases": [
+      "CAPM",
+      "Certified Associate in Project Management"
+    ],
+    "officialUrl": "https://www.pmi.org/certifications/capm"
+  },
+  {
+    "id": "pmi-acp",
+    "name": "PMI Agile Certified Practitioner",
+    "shortName": "PMI-ACP",
+    "vendor": "PMI",
+    "code": null,
+    "category": "Project Management",
+    "level": "Professional",
+    "aliases": [
+      "PMI-ACP",
+      "PMI Agile Certified Practitioner",
+      "Agile Certified Practitioner"
+    ],
+    "officialUrl": "https://www.pmi.org/certifications/agile-acp"
+  },
+  {
+    "id": "psm-2",
+    "name": "Professional Scrum Master II",
+    "shortName": "PSM II",
+    "vendor": "Scrum.org",
+    "code": null,
+    "category": "Project Management",
+    "level": "Professional",
+    "aliases": [
+      "PSM II",
+      "PSM 2",
+      "Professional Scrum Master II"
+    ],
+    "officialUrl": "https://www.scrum.org/assessments/professional-scrum-master-ii-certification"
+  },
+  {
+    "id": "pspo-1",
+    "name": "Professional Scrum Product Owner I",
+    "shortName": "PSPO I",
+    "vendor": "Scrum.org",
+    "code": null,
+    "category": "Project Management",
+    "level": "Associate",
+    "aliases": [
+      "PSPO I",
+      "PSPO 1",
+      "Professional Scrum Product Owner"
+    ],
+    "officialUrl": "https://www.scrum.org/assessments/professional-scrum-product-owner-i-certification"
+  },
+  {
+    "id": "csm",
+    "name": "Certified ScrumMaster",
+    "shortName": "CSM",
+    "vendor": "Scrum Alliance",
+    "code": null,
+    "category": "Project Management",
+    "level": "Associate",
+    "aliases": [
+      "CSM",
+      "Certified ScrumMaster",
+      "Certified Scrum Master"
+    ],
+    "officialUrl": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"
+  },
+  {
+    "id": "cspo",
+    "name": "Certified Scrum Product Owner",
+    "shortName": "CSPO",
+    "vendor": "Scrum Alliance",
+    "code": null,
+    "category": "Project Management",
+    "level": "Associate",
+    "aliases": [
+      "CSPO",
+      "Certified Scrum Product Owner"
+    ],
+    "officialUrl": "https://www.scrumalliance.org/get-certified/product-owner-track/certified-scrum-product-owner"
+  },
+  {
+    "id": "prince2-foundation",
+    "name": "PRINCE2 Foundation",
+    "shortName": "PRINCE2 Foundation",
+    "vendor": "PeopleCert",
+    "code": null,
+    "category": "Project Management",
+    "level": "Foundational",
+    "aliases": [
+      "PRINCE2 Foundation",
+      "PRINCE2"
+    ],
+    "officialUrl": "https://www.axelos.com/certifications/propath/prince2-7-project-management"
+  },
+  {
+    "id": "safe-agilist",
+    "name": "Certified SAFe Agilist",
+    "shortName": "SAFe Agilist",
+    "vendor": "Scaled Agile",
+    "code": null,
+    "category": "Project Management",
+    "level": "Professional",
+    "aliases": [
+      "SAFe Agilist",
+      "Certified SAFe Agilist",
+      "Leading SAFe"
+    ],
+    "officialUrl": "https://scaledagile.com/training/leading-safe/"
+  },
+  {
+    "id": "itil4-foundation",
+    "name": "ITIL 4 Foundation",
+    "shortName": "ITIL 4",
+    "vendor": "PeopleCert",
+    "code": null,
+    "category": "Project Management",
+    "level": "Foundational",
+    "aliases": [
+      "ITIL 4 Foundation",
+      "ITIL Foundation",
+      "ITIL"
+    ],
+    "officialUrl": "https://www.axelos.com/certifications/itil-service-management/itil-4-foundation"
+  },
+  {
+    "id": "ecba",
+    "name": "Entry Certificate in Business Analysis",
+    "shortName": "ECBA",
+    "vendor": "IIBA",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Foundational",
+    "aliases": [
+      "ECBA",
+      "Entry Certificate in Business Analysis"
+    ],
+    "officialUrl": "https://www.iiba.org/business-analysis-certifications/ecba/"
+  },
+  {
+    "id": "ccba",
+    "name": "Certification of Capability in Business Analysis",
+    "shortName": "CCBA",
+    "vendor": "IIBA",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Associate",
+    "aliases": [
+      "CCBA",
+      "Certification of Capability in Business Analysis"
+    ],
+    "officialUrl": "https://www.iiba.org/business-analysis-certifications/ccba/"
+  },
+  {
+    "id": "cbap",
+    "name": "Certified Business Analysis Professional",
+    "shortName": "CBAP",
+    "vendor": "IIBA",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Professional",
+    "aliases": [
+      "CBAP",
+      "Certified Business Analysis Professional"
+    ],
+    "officialUrl": "https://www.iiba.org/business-analysis-certifications/cbap/"
+  },
+  {
+    "id": "pmi-pba",
+    "name": "PMI Professional in Business Analysis",
+    "shortName": "PMI-PBA",
+    "vendor": "PMI",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Professional",
+    "aliases": [
+      "PMI-PBA",
+      "PMI Professional in Business Analysis"
+    ],
+    "officialUrl": "https://www.pmi.org/certifications/business-analysis-pba"
+  },
+  {
+    "id": "iiba-aac",
+    "name": "IIBA Agile Analysis Certification",
+    "shortName": "IIBA-AAC",
+    "vendor": "IIBA",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Professional",
+    "aliases": [
+      "IIBA-AAC",
+      "Agile Analysis Certification"
+    ],
+    "officialUrl": "https://www.iiba.org/business-analysis-certifications/agile-analysis/"
+  },
+  {
+    "id": "iiba-cbda",
+    "name": "IIBA Certification in Business Data Analytics",
+    "shortName": "IIBA-CBDA",
+    "vendor": "IIBA",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Professional",
+    "aliases": [
+      "IIBA-CBDA",
+      "CBDA",
+      "Certification in Business Data Analytics"
+    ],
+    "officialUrl": "https://www.iiba.org/business-analysis-certifications/business-data-analytics-certification/"
+  },
+  {
+    "id": "cpre-fl",
+    "name": "IREB Certified Professional for Requirements Engineering – Foundation Level",
+    "shortName": "CPRE-FL",
+    "vendor": "IREB",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Foundational",
+    "aliases": [
+      "CPRE",
+      "CPRE Foundation Level",
+      "Certified Professional for Requirements Engineering"
+    ],
+    "officialUrl": "https://www.ireb.org/en/cpre/foundation/"
+  },
+  {
+    "id": "iiba-cpoa",
+    "name": "IIBA Certificate in Product Ownership Analysis",
+    "shortName": "IIBA-CPOA",
+    "vendor": "IIBA",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Professional",
+    "aliases": [
+      "IIBA-CPOA",
+      "CPOA",
+      "Certificate in Product Ownership Analysis"
+    ],
+    "officialUrl": "https://www.iiba.org/business-analysis-certifications/certificate-in-product-ownership-analysis-iiba-cpoa/"
+  },
+  {
+    "id": "iiba-cca",
+    "name": "IIBA Certificate in Cybersecurity Analysis",
+    "shortName": "IIBA-CCA",
+    "vendor": "IIBA",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Associate",
+    "aliases": [
+      "IIBA-CCA",
+      "Certificate in Cybersecurity Analysis"
+    ],
+    "officialUrl": "https://www.iiba.org/business-analysis-certifications/certificate-in-cybersecurity-analysis/"
+  },
+  {
+    "id": "bcs-ba-foundation",
+    "name": "BCS Foundation Certificate in Business Analysis",
+    "shortName": "BCS BA Foundation",
+    "vendor": "BCS",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Foundational",
+    "aliases": [
+      "BCS BA Foundation",
+      "BCS Foundation Certificate in Business Analysis",
+      "BCS Business Analysis Foundation",
+      "BCS Foundation in Business Analysis"
+    ],
+    "officialUrl": "https://www.bcs.org/qualifications-and-certifications/certifications-for-professionals/business-analysis-certifications/bcs-foundation-certificate-in-business-analysis/"
+  },
+  {
+    "id": "bcs-ba-diploma",
+    "name": "BCS International Diploma in Business Analysis",
+    "shortName": "BCS BA Diploma",
+    "vendor": "BCS",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Expert",
+    "aliases": [
+      "BCS BA Diploma",
+      "BCS International Diploma in Business Analysis",
+      "BCS Diploma in Business Analysis",
+      "International Diploma in Business Analysis"
+    ],
+    "officialUrl": "https://www.bcs.org/qualifications-and-certifications/certifications-for-professionals/business-analysis-certifications/bcs-international-diploma-in-business-analysis/"
+  },
+  {
+    "id": "agileba",
+    "name": "APMG AgileBA Foundation",
+    "shortName": "AgileBA",
+    "vendor": "APMG International",
+    "code": null,
+    "category": "Business Analysis",
+    "level": "Foundational",
+    "aliases": [
+      "AgileBA",
+      "Agile BA Foundation",
+      "AgileBA Foundation",
+      "AgileBA Practitioner"
+    ],
+    "officialUrl": "https://apmg-international.com/product/agileba"
+  },
+  {
+    "id": "istqb-ctfl",
+    "name": "ISTQB Certified Tester Foundation Level",
+    "shortName": "ISTQB CTFL",
+    "vendor": "ISTQB",
+    "code": "CTFL",
+    "category": "Testing",
+    "level": "Foundational",
+    "aliases": [
+      "ISTQB CTFL",
+      "CTFL",
+      "ISTQB Foundation Level",
+      "Certified Tester Foundation Level"
+    ],
+    "officialUrl": "https://www.istqb.org/certifications/certified-tester-foundation-level"
+  },
+  {
+    "id": "istqb-ctfl-at",
+    "name": "ISTQB Certified Tester Foundation Level Agile Tester",
+    "shortName": "ISTQB CTFL-AT",
+    "vendor": "ISTQB",
+    "code": "CTFL-AT",
+    "category": "Testing",
+    "level": "Foundational",
+    "aliases": [
+      "CTFL-AT",
+      "ISTQB Agile Tester",
+      "Certified Tester Agile Tester"
+    ],
+    "officialUrl": "https://www.istqb.org/certifications/certified-tester-foundation-level-agile-tester-ctfl-at"
+  },
+  {
+    "id": "istqb-ctal-ta",
+    "name": "ISTQB Certified Tester Advanced Level Test Analyst",
+    "shortName": "ISTQB CTAL-TA",
+    "vendor": "ISTQB",
+    "code": "CTAL-TA",
+    "category": "Testing",
+    "level": "Professional",
+    "aliases": [
+      "CTAL-TA",
+      "ISTQB Test Analyst",
+      "Advanced Level Test Analyst"
+    ],
+    "officialUrl": "https://www.istqb.org/certifications/certified-tester-advanced-level-test-analyst"
+  },
+  {
+    "id": "istqb-ctal-tta",
+    "name": "ISTQB Certified Tester Advanced Level Technical Test Analyst",
+    "shortName": "ISTQB CTAL-TTA",
+    "vendor": "ISTQB",
+    "code": "CTAL-TTA",
+    "category": "Testing",
+    "level": "Professional",
+    "aliases": [
+      "CTAL-TTA",
+      "ISTQB Technical Test Analyst",
+      "Advanced Level Technical Test Analyst"
+    ],
+    "officialUrl": "https://www.istqb.org/certifications/certified-tester-advanced-level-technical-test-analyst-ctal-tta"
+  },
+  {
+    "id": "istqb-ctal-tm",
+    "name": "ISTQB Certified Tester Advanced Level Test Management",
+    "shortName": "ISTQB CTAL-TM",
+    "vendor": "ISTQB",
+    "code": "CTAL-TM",
+    "category": "Testing",
+    "level": "Expert",
+    "aliases": [
+      "CTAL-TM",
+      "ISTQB Test Manager",
+      "Advanced Level Test Management"
+    ],
+    "officialUrl": "https://www.istqb.org/certifications/certified-tester-advanced-level-test-management-ctal-tm"
+  },
+  {
+    "id": "istqb-ct-tae",
+    "name": "ISTQB Certified Tester Test Automation Engineering",
+    "shortName": "ISTQB CT-TAE",
+    "vendor": "ISTQB",
+    "code": "CTAL-TAE",
+    "category": "Testing",
+    "level": "Professional",
+    "aliases": [
+      "CT-TAE",
+      "CTAL-TAE",
+      "ISTQB Test Automation Engineer",
+      "Test Automation Engineer"
+    ],
+    "officialUrl": "https://www.istqb.org/certifications/certified-tester-advanced-level-test-automation-engineering-ctal-tae"
+  },
+  {
+    "id": "istqb-ct-pt",
+    "name": "ISTQB Certified Tester Performance Testing",
+    "shortName": "ISTQB CT-PT",
+    "vendor": "ISTQB",
+    "code": "CT-PT",
+    "category": "Testing",
+    "level": "Professional",
+    "aliases": [
+      "CT-PT",
+      "ISTQB Performance Testing",
+      "Certified Tester Performance Testing"
+    ],
+    "officialUrl": "https://www.istqb.org/certifications/certified-tester-performance-testing-ct-pt/"
+  },
+  {
+    "id": "istqb-ct-ai",
+    "name": "ISTQB Certified Tester AI Testing",
+    "shortName": "ISTQB CT-AI",
+    "vendor": "ISTQB",
+    "code": "CT-AI",
+    "category": "Testing",
+    "level": "Professional",
+    "aliases": [
+      "CT-AI",
+      "ISTQB AI Testing",
+      "Certified Tester AI Testing"
+    ],
+    "officialUrl": "https://www.istqb.org/certifications/certified-tester-ai-testing-ct-ai"
+  },
+  {
+    "id": "tosca-as1",
+    "name": "Tricentis Tosca Automation Specialist Level 1",
+    "shortName": "Tosca AS1",
+    "vendor": "Tricentis",
+    "code": null,
+    "category": "Testing",
+    "level": "Associate",
+    "aliases": [
+      "Tosca Automation Specialist",
+      "Tricentis Tosca AS1",
+      "Tosca AS1"
+    ],
+    "officialUrl": "https://www.tricentis.com/academy/certifications"
+  }
+]

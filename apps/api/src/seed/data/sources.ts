@@ -1,0 +1,146 @@
+import type { SourceRef } from '../../db/schema.js';
+
+const ACCESSED = '2026-10';
+
+export const onet = (code: string, title: string): SourceRef => ({
+  id: `onet-${code}`,
+  title: `O*NET OnLine — ${title} (${code})`,
+  url: `https://www.onetonline.org/link/summary/${code}`,
+  publisher: 'U.S. Department of Labor, O*NET',
+  accessed: ACCESSED,
+});
+
+const bls = (id: string, title: string, path: string): SourceRef => ({
+  id: `bls-${id}`,
+  title: `BLS Occupational Outlook Handbook — ${title}`,
+  url: `https://www.bls.gov/ooh/${path}`,
+  publisher: 'U.S. Bureau of Labor Statistics',
+  accessed: ACCESSED,
+});
+
+export const SRC = {
+  blsSoftware: bls('software', 'Software Developers, QA Analysts, and Testers', 'computer-and-information-technology/software-developers.htm'),
+  blsWeb: bls('web', 'Web Developers and Digital Designers', 'computer-and-information-technology/web-developers.htm'),
+  blsInfosec: bls('infosec', 'Information Security Analysts', 'computer-and-information-technology/information-security-analysts.htm'),
+  blsDataSci: bls('datasci', 'Data Scientists', 'math/data-scientists.htm'),
+  blsDba: bls('dba', 'Database Administrators and Architects', 'computer-and-information-technology/database-administrators.htm'),
+  blsSysadmin: bls('sysadmin', 'Network and Computer Systems Administrators', 'computer-and-information-technology/network-and-computer-systems-administrators.htm'),
+  blsNetArch: bls('netarch', 'Computer Network Architects', 'computer-and-information-technology/computer-network-architects.htm'),
+  blsSysAnalyst: bls('sysanalyst', 'Computer Systems Analysts', 'computer-and-information-technology/computer-systems-analysts.htm'),
+  blsPm: bls('pm', 'Project Management Specialists', 'business-and-financial/project-management-specialists.htm'),
+  blsMgmtAnalyst: bls('mgmt', 'Management Analysts', 'business-and-financial/management-analysts.htm'),
+  blsItManager: bls('itmgr', 'Computer and Information Systems Managers', 'management/computer-and-information-systems-managers.htm'),
+  blsResearch: bls('research', 'Computer and Information Research Scientists', 'computer-and-information-technology/computer-and-information-research-scientists.htm'),
+  wef2025: {
+    id: 'wef-foj-2025',
+    title: 'Future of Jobs Report 2025',
+    url: 'https://www.weforum.org/publications/the-future-of-jobs-report-2025/',
+    publisher: 'World Economic Forum',
+    accessed: ACCESSED,
+  },
+  soSurvey2025: {
+    id: 'so-survey-2025',
+    title: 'Stack Overflow Developer Survey 2025',
+    url: 'https://survey.stackoverflow.co/2025/',
+    publisher: 'Stack Overflow',
+    accessed: ACCESSED,
+  },
+  dora: {
+    id: 'dora',
+    title: 'DORA research program (State of DevOps reports)',
+    url: 'https://dora.dev/research/',
+    publisher: 'DORA / Google Cloud',
+    accessed: ACCESSED,
+  },
+  sreBook: {
+    id: 'google-sre-book',
+    title: 'Site Reliability Engineering (book)',
+    url: 'https://sre.google/sre-book/table-of-contents/',
+    publisher: 'Google',
+    accessed: ACCESSED,
+  },
+  niceFramework: {
+    id: 'nice-framework',
+    title: 'NICE Workforce Framework for Cybersecurity',
+    url: 'https://niccs.cisa.gov/workforce-development/nice-framework',
+    publisher: 'NIST / CISA',
+    accessed: ACCESSED,
+  },
+  isc2Research: {
+    id: 'isc2-research',
+    title: 'ISC2 Cybersecurity Workforce research',
+    url: 'https://www.isc2.org/research',
+    publisher: 'ISC2',
+    accessed: ACCESSED,
+  },
+  euAiAct: {
+    id: 'eu-ai-act',
+    title: 'EU regulatory framework for AI (AI Act)',
+    url: 'https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai',
+    publisher: 'European Commission',
+    accessed: ACCESSED,
+  },
+  eaa: {
+    id: 'eu-accessibility-act',
+    title: 'European Accessibility Act',
+    url: 'https://ec.europa.eu/social/main.jsp?catId=1202',
+    publisher: 'European Commission',
+    accessed: ACCESSED,
+  },
+  wcag: {
+    id: 'wcag',
+    title: 'WCAG 2 Overview',
+    url: 'https://www.w3.org/WAI/standards-guidelines/wcag/',
+    publisher: 'W3C Web Accessibility Initiative',
+    accessed: ACCESSED,
+  },
+  babok: {
+    id: 'babok',
+    title: 'BABOK Guide',
+    url: 'https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/',
+    publisher: 'IIBA',
+    accessed: ACCESSED,
+  },
+  pmbok: {
+    id: 'pmbok',
+    title: 'PMBOK Guide and Standards',
+    url: 'https://www.pmi.org/standards/pmbok',
+    publisher: 'Project Management Institute',
+    accessed: ACCESSED,
+  },
+  scrumGuide: {
+    id: 'scrum-guide',
+    title: 'The Scrum Guide',
+    url: 'https://scrumguides.org/scrum-guide.html',
+    publisher: 'Schwaber & Sutherland',
+    accessed: ACCESSED,
+  },
+  finops: {
+    id: 'finops',
+    title: 'FinOps Framework',
+    url: 'https://www.finops.org/framework/',
+    publisher: 'FinOps Foundation',
+    accessed: ACCESSED,
+  },
+  esco: {
+    id: 'esco',
+    title: 'ESCO — European Skills, Competences, Qualifications and Occupations',
+    url: 'https://esco.ec.europa.eu/en/classification/occupation_main',
+    publisher: 'European Commission',
+    accessed: ACCESSED,
+  },
+  sfia: {
+    id: 'sfia',
+    title: 'SFIA — Skills Framework for the Information Age',
+    url: 'https://sfia-online.org/en/sfia-9',
+    publisher: 'SFIA Foundation',
+    accessed: ACCESSED,
+  },
+  certTrends: {
+    id: 'cert-trends',
+    title: 'IT Cert Trend (job-market certification demand)',
+    url: 'https://cert-chart.vercel.app/',
+    publisher: 'Cert Trends project',
+    accessed: ACCESSED,
+  },
+} satisfies Record<string, SourceRef>;
