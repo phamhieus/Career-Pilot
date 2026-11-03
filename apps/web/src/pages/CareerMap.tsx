@@ -10,7 +10,7 @@ interface MapData {
   nodes: { slug: string; name: string; family: string }[];
   edges: { from: string; to: string; difficulty: number; typicalMonths: number; rationale: string; transferableSkills: string[] }[];
 }
-const FAMILY_COLORS = ['#097fe8', '#f64932', '#ffb110', '#62aef0', '#b18164', '#0f8a7e', '#e89d01', '#02093a', '#e32d14', '#6b7280', '#0075de'];
+const FAMILY_COLORS = ['#097fe8', '#f64932', '#ffb110', '#62aef0', '#b18164', '#0f8a7e', '#e89d01', '#02093a', '#e32d14', '#6b7280', 'var(--cp-primary)'];
 const DIFF_COLOR = ['', '#0f8a7e', '#62aef0', '#ffb110', '#f64932', '#e32d14'];
 const DIFF = ['', 'Adjacent', 'Moderate', 'Significant', 'Major', 'Pivot'];
 

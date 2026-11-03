@@ -48,7 +48,7 @@ export default function Landing() {
           {MARKS.map((c, i) => <span key={i} className="animate-pop size-10 rounded-full border-2 bg-surface" style={{ borderColor: c, animationDelay: `${i * 70}ms` }} />)}
         </div>
         <h1 className="mx-auto max-w-4xl text-[44px] leading-[1.08] font-semibold tracking-[-0.035em] md:text-display">
-          Plan your next tech career move, then <span className="inline-block rounded-full bg-peach px-5 py-1 md:px-6">prove</span> it.
+          Plan your next tech career move, then <span className="inline-block rounded-full bg-accent-soft px-5 py-1 text-accent-ink md:px-6">prove</span> it.
         </h1>
         <p className="mx-auto mt-6 max-w-2xl font-serif text-[18px] leading-[1.56] text-ink-2">
           CareerPilot connects role discovery, skill evidence, real job postings, mock interviews, learning plans and your CV in one honest workspace — with scores that say “unknown” when evidence is missing.

@@ -42,7 +42,7 @@ function HBar({ data, height = 280, onSelect }: { data: { key: string; name: str
         <XAxis type="number" tick={AXIS} axisLine={false} tickLine={false} allowDecimals={false} />
         <YAxis type="category" dataKey="name" tick={AXIS} width={150} axisLine={false} tickLine={false} />
         <Tooltip {...tooltipStyle} />
-        <Bar dataKey="value" name="Postings" fill="#0075de" radius={[0, 4, 4, 0]} maxBarSize={14} cursor="pointer" onClick={(_, i) => onSelect(data[i].key)} />
+        <Bar dataKey="value" name="Postings" fill="var(--cp-primary)" radius={[0, 4, 4, 0]} maxBarSize={14} cursor="pointer" onClick={(_, i) => onSelect(data[i].key)} />
       </BarChart>
     </ResponsiveContainer>
   );
@@ -130,7 +130,7 @@ function MarketBody({ d, view, filters }: { d: MarketData; view: 'charts' | 'tab
                 <XAxis dataKey="name" tick={AXIS} axisLine={false} tickLine={false} />
                 <YAxis tick={AXIS} axisLine={false} tickLine={false} allowDecimals={false} />
                 <Tooltip {...tooltipStyle} />
-                <Bar dataKey="value" name="Postings" fill="#0075de" radius={[4, 4, 0, 0]} maxBarSize={28} cursor="pointer" onClick={(_, i) => open('month')(months[i].key)} />
+                <Bar dataKey="value" name="Postings" fill="var(--cp-primary)" radius={[4, 4, 0, 0]} maxBarSize={28} cursor="pointer" onClick={(_, i) => open('month')(months[i].key)} />
               </BarChart>
             </ResponsiveContainer>
           ) : table(months.map((m) => [m.name, m.value]), ['Month', 'Postings'], (i) => open('month')(months[i].key))}
@@ -177,7 +177,7 @@ function MarketBody({ d, view, filters }: { d: MarketData; view: 'charts' | 'tab
                 <YAxis tick={AXIS} axisLine={false} tickLine={false} />
                 <Tooltip {...tooltipStyle} />
                 <Area dataKey="band" name="80% interval" fill="#62aef0" fillOpacity={0.25} stroke="none" />
-                <Line dataKey="value" name="Trend" stroke="#0075de" strokeWidth={2} dot={{ r: 4 }} />
+                <Line dataKey="value" name="Trend" stroke="var(--cp-primary)" strokeWidth={2} dot={{ r: 4 }} />
               </ComposedChart>
             </ResponsiveContainer>
           </Card>

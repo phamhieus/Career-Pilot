@@ -30,7 +30,7 @@ export default function InterviewNew() {
   const jobs = useQuery({ queryKey: ['jobs', 'for-interview'], queryFn: () => api.get<{ items: JobListItem[] }>('/jobs?limit=100') });
   const { register, handleSubmit, watch, formState } = useForm<Values>({
     resolver: zodResolver(schema),
-    defaultValues: { mode: (params.get('mode') as Values['mode']) ?? (params.get('jobId') ? 'job_specific' : 'skill_verification'), roleSlug: params.get('role') ?? '', jobId: params.get('jobId') ?? '', seniority: 'middle', roundType: (params.get('round') as Values['roundType']) ?? 'mixed', language: 'en', durationMinutes: 20, answerMode: 'text' },
+    defaultValues: { mode: (params.get('mode') as Values['mode']) ?? (params.get('jobId') ? 'job_specific' : 'skill_verification'), roleSlug: params.get('role') ?? '', jobId: params.get('jobId') ?? '', seniority: 'middle', roundType: (params.get('round') as Values['roundType']) ?? 'mixed', language: 'en', durationMinutes: 20, answerMode: 'voice' },
   });
   const mode = watch('mode');
   const onSubmit = handleSubmit(async (raw) => {
@@ -57,7 +57,7 @@ export default function InterviewNew() {
           <Field label="Language"><Select {...register('language')}><option value="en">English</option><option value="vi">Tiếng Việt</option></Select></Field>
           {mode === 'discovery' ? <Notice className="md:col-span-2">A short background step, then five quick multiple-choice questions — about 4 minutes. No score — your answers become profile suggestions you can review.</Notice> : <>
           <Field label="Duration (minutes)" error={formState.errors.durationMinutes?.message}><Select {...register('durationMinutes')}>{[10, 15, 20, 30, 45].map((d) => <option key={d} value={d}>{d}</option>)}</Select></Field>
-          <Field label="Answer mode" hint="Voice uses dictation into the answer box (browser speech or tools like Wispr Flow). Audio is never stored." className="md:col-span-2"><Select {...register('answerMode')}><option value="text">Text</option><option value="voice">Voice (dictation)</option></Select></Field>
+          <Field label="Answer mode" hint="Voice call: the interviewer reads each question aloud and you answer by speaking, with an editable live transcript. You can record video or audio to replay later; recordings stay in this browser and are never uploaded." className="md:col-span-2"><Select {...register('answerMode')}><option value="voice">Voice call (speak your answers, optional recording)</option><option value="text">Text (type or dictate)</option></Select></Field>
           {meta.data && !meta.data.ai.configured && <Notice tone="warn" className="md:col-span-2">Mock interviews are AI-driven: questions, rubric grading, follow-ups and coaching. No AI provider is connected yet, so a basic heuristic interviewer would be used. <Link to="/settings" className="font-medium underline">Add your OpenAI or DeepSeek key in Settings</Link> for the full experience.</Notice>}
           {meta.data?.ai.configured && <Notice className="md:col-span-2">AI interviewer: {meta.data.ai.provider} · {meta.data.ai.model}. Questions adapt to your answers; you get AI coaching after the session.</Notice>}
           <Notice className="md:col-span-2">A good mock interview is practice, not proof: it’s recorded as interview observation and never verifies coding or production experience on its own.</Notice>

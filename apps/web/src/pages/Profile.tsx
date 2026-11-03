@@ -145,7 +145,7 @@ export function SkillPicker({ value, onChange, options }: { value: string[]; onC
   const matches = q ? options.filter((o) => o.name.toLowerCase().includes(q.toLowerCase()) && !value.includes(o.slug)).slice(0, 6) : [];
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex flex-wrap gap-1">{value.map((v) => <button type="button" key={v} onClick={() => onChange(value.filter((x) => x !== v))} className="rounded-full bg-sky-tint px-2.5 py-0.5 text-caption text-[#005bb0] dark:bg-primary-soft dark:text-primary">{options.find((o) => o.slug === v)?.name ?? v} ×</button>)}</div>
+      <div className="flex flex-wrap gap-1">{value.map((v) => <button type="button" key={v} onClick={() => onChange(value.filter((x) => x !== v))} className="rounded-full bg-sky-tint px-2.5 py-0.5 text-caption text-primary-ink dark:bg-primary-soft dark:text-primary">{options.find((o) => o.slug === v)?.name ?? v} ×</button>)}</div>
       <Input placeholder="Type to add a skill…" value={q} onChange={(e) => setQ(e.target.value)} />
       {matches.length > 0 && <div className="flex flex-wrap gap-1">{matches.map((m) => <button type="button" key={m.slug} onClick={() => { onChange([...value, m.slug]); setQ(''); }} className="rounded-full bg-black/[0.05] px-2.5 py-0.5 text-caption dark:bg-white/10">+ {m.name}</button>)}</div>}
     </div>
@@ -249,7 +249,7 @@ function Preferences({ data }: { data: ProfileResponse }) {
             <div key={d.key}>
               <div className="flex items-center justify-between text-body-sm"><span className="font-medium">{d.label}</span><span className="text-muted">{aff[d.key] ?? '—'}</span></div>
               <div className="text-caption text-muted">{d.description}</div>
-              <input aria-label={d.label} type="range" min={1} max={5} value={aff[d.key] ?? 3} onChange={(e) => setAff({ ...aff, [d.key]: Number(e.target.value) })} className="mt-1 w-full accent-[#0075de]" />
+              <input aria-label={d.label} type="range" min={1} max={5} value={aff[d.key] ?? 3} onChange={(e) => setAff({ ...aff, [d.key]: Number(e.target.value) })} className="mt-1 w-full accent-primary" />
             </div>
           ))}
         </div>

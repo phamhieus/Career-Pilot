@@ -124,7 +124,7 @@ function AnalyticsView() {
             <XAxis dataKey="name" tick={{ fontSize: 12, fill: 'var(--cp-muted)' }} axisLine={false} tickLine={false} />
             <YAxis allowDecimals={false} tick={{ fontSize: 12, fill: 'var(--cp-muted)' }} axisLine={false} tickLine={false} />
             <Tooltip contentStyle={{ background: 'var(--cp-surface)', border: '1px solid var(--cp-line)', borderRadius: 8, fontSize: 12 }} cursor={{ fill: 'rgba(0,117,222,0.06)' }} />
-            <Bar dataKey="value" name="Applications" fill="#0075de" radius={[4, 4, 0, 0]} maxBarSize={40} />
+            <Bar dataKey="value" name="Applications" fill="var(--cp-primary)" radius={[4, 4, 0, 0]} maxBarSize={40} />
           </BarChart>
         </ResponsiveContainer>
       </Card>

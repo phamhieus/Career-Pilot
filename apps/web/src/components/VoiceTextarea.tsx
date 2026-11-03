@@ -2,14 +2,14 @@ import { Mic, MicOff } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { cx, Textarea } from './ui';
 
-interface SpeechRecognitionLike {
+export interface SpeechRecognitionLike {
   lang: string; continuous: boolean; interimResults: boolean;
   onresult: ((e: { resultIndex: number; results: ArrayLike<{ isFinal: boolean; 0: { transcript: string } }> }) => void) | null;
   onend: (() => void) | null; onerror: ((e: { error: string }) => void) | null;
   start: () => void; stop: () => void;
 }
 type Ctor = new () => SpeechRecognitionLike;
-const getCtor = (): Ctor | undefined => (window as unknown as { SpeechRecognition?: Ctor; webkitSpeechRecognition?: Ctor }).SpeechRecognition ?? (window as unknown as { webkitSpeechRecognition?: Ctor }).webkitSpeechRecognition;
+export const getCtor = (): Ctor | undefined => (window as unknown as { SpeechRecognition?: Ctor; webkitSpeechRecognition?: Ctor }).SpeechRecognition ?? (window as unknown as { webkitSpeechRecognition?: Ctor }).webkitSpeechRecognition;
 
 /**
  * Answer box supporting typing, OS-level dictation (e.g. Wispr Flow types into the focused field)

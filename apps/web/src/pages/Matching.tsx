@@ -43,7 +43,7 @@ export default function Matching() {
   );
 }
 
-const GATE_ICON = { clear: <CheckCircle2 className="size-5 text-teal" />, needs_evidence: <CircleHelp className="size-5 text-[#7a4f00]" />, blocked: <AlertTriangle className="size-5 text-coral" /> };
+const GATE_ICON = { clear: <CheckCircle2 className="size-5 text-teal" />, needs_evidence: <CircleHelp className="size-5 text-accent-ink" />, blocked: <AlertTriangle className="size-5 text-coral" /> };
 
 function RoleMatchDetail({ slug, includeDemo }: { slug: string; includeDemo: boolean }) {
   const [params] = useSearchParams();

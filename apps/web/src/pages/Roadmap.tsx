@@ -89,7 +89,7 @@ export default function Roadmap() {
       if (s === t || seen.has(`${s}>${t}`)) continue;
       seen.add(`${s}>${t}`);
       const onChain = !!sel && prereqChain.has(e.from) && prereqChain.has(e.to);
-      edges.push({ id: `${s}>${t}`, source: s, target: t, markerEnd: { type: MarkerType.ArrowClosed }, style: { stroke: onChain ? '#0075de' : undefined, strokeWidth: onChain ? 2 : 1, opacity: sel && !onChain ? 0.25 : 1 } });
+      edges.push({ id: `${s}>${t}`, source: s, target: t, markerEnd: { type: MarkerType.ArrowClosed }, style: { stroke: onChain ? 'var(--cp-primary)' : undefined, strokeWidth: onChain ? 2 : 1, opacity: sel && !onChain ? 0.25 : 1 } });
     }
     return { nodes, edges };
   }, [q.data, collapsed, highlightGaps, sel, prereqChain]);
@@ -109,7 +109,7 @@ export default function Roadmap() {
       </div>
       <div className="mb-3 flex flex-wrap gap-1.5" aria-label="Groups">
         {groups.map((g) => (
-          <button key={g} onClick={() => setCollapsed((c) => { const n = new Set(c); if (n.has(g)) n.delete(g); else n.add(g); return n; })} className={cx('rounded-full px-3 py-1 text-caption font-medium transition-colors', collapsed.has(g) ? 'bg-black/[0.05] text-muted dark:bg-white/10' : 'bg-sky-tint text-[#005bb0] dark:bg-primary-soft dark:text-primary')}>
+          <button key={g} onClick={() => setCollapsed((c) => { const n = new Set(c); if (n.has(g)) n.delete(g); else n.add(g); return n; })} className={cx('rounded-full px-3 py-1 text-caption font-medium transition-colors', collapsed.has(g) ? 'bg-black/[0.05] text-muted dark:bg-white/10' : 'bg-sky-tint text-primary-ink dark:bg-primary-soft dark:text-primary')}>
             {collapsed.has(g) ? '+ ' : '− '}{g.replace(/-/g, ' ')}
           </button>
         ))}
