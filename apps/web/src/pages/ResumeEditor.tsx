@@ -157,7 +157,7 @@ function BulletEditor({ b, onText, onLock, onRevert, onConfirm, onLink, onDelete
   return (
     <div className={cx('rounded-md border p-2', flagged ? 'border-marigold bg-marigold/5' : 'border-transparent')}>
       <Textarea rows={2} value={b.text} onChange={(e) => onText(e.target.value)} className="min-h-0 border-0 bg-transparent px-1 py-1" aria-label="Bullet text" />
-      {b.issues && b.issues.length > 0 && <ul className="mt-1 flex flex-col gap-0.5 px-1">{b.issues.map((i) => <li key={i} className="flex items-start gap-1 text-caption text-[#7a4f00] dark:text-marigold"><AlertTriangle className="mt-0.5 size-3 shrink-0" />{i}</li>)}</ul>}
+      {b.issues && b.issues.length > 0 && <ul className="mt-1 flex flex-col gap-0.5 px-1">{b.issues.map((i) => <li key={i} className="flex items-start gap-1 text-caption text-accent-ink"><AlertTriangle className="mt-0.5 size-3 shrink-0" />{i}</li>)}</ul>}
       <div className="mt-1 flex flex-wrap items-center gap-1 px-1 text-caption text-muted">
         <span className="mr-auto">{b.evidence.length ? `${b.evidence.length} evidence link(s)` : 'no evidence'}</span>
         {b.originalText && b.originalText !== b.text && <button onClick={onRevert} className="inline-flex items-center gap-1 rounded px-1.5 py-0.5 hover:bg-black/5 dark:hover:bg-white/5" title={`Original: ${b.originalText}`}><Undo2 className="size-3" />Revert to source</button>}
@@ -177,7 +177,7 @@ function Preview({ content, template }: { content: ResumeContent; template: stri
   const main = content.sections.filter((s) => !side.includes(s));
   const Sec = ({ s }: { s: ResumeContent['sections'][number] }) => (
     <div className={compact ? 'mb-3' : 'mb-5'}>
-      <div className="mb-1.5 border-b border-[#ddd] pb-0.5 text-[10px] font-bold tracking-[0.08em] text-[#0075de] uppercase">{s.title}</div>
+      <div className="mb-1.5 border-b border-[#ddd] pb-0.5 text-[10px] font-bold tracking-[0.08em] text-[#3451d1] uppercase">{s.title}</div>
       {s.entries.map((e) => (
         <div key={e.id} className="mb-2">
           {e.heading && <div className="flex justify-between gap-2 text-[11px]"><span className="font-semibold">{e.heading}{e.subheading && <span className="font-normal"> — {e.subheading}</span>}</span><span className="shrink-0 text-[#777]">{e.period}</span></div>}

@@ -117,7 +117,7 @@ export default function JobDetail() {
           {match.roadmapNodes.length > 0 && (
             <Card>
               <div className="mb-2 flex items-center gap-2 font-semibold"><Map className="size-4 text-primary" />Roadmap nodes for your gaps</div>
-              <div className="flex flex-wrap gap-1.5">{match.roadmapNodes.map((n) => <Link key={n.roleSlug + n.nodeKey} to={`/roadmap/${n.roleSlug}`} className="rounded-full bg-sky-tint px-2.5 py-0.5 text-caption text-[#005bb0] dark:bg-primary-soft dark:text-primary">{n.label}</Link>)}</div>
+              <div className="flex flex-wrap gap-1.5">{match.roadmapNodes.map((n) => <Link key={n.roleSlug + n.nodeKey} to={`/roadmap/${n.roleSlug}`} className="rounded-full bg-sky-tint px-2.5 py-0.5 text-caption text-primary-ink dark:bg-primary-soft dark:text-primary">{n.label}</Link>)}</div>
             </Card>
           )}
           {role && <Card><div className="text-body-sm">Normalized role: <Link to={`/atlas/${role.slug}`} className="font-medium text-primary">{role.name}</Link></div></Card>}

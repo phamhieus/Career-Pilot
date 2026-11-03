@@ -5,23 +5,25 @@
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 
 /*
- * Design tokens from DESIGN.md ("warm paper notebook").
- * Semantic tokens (canvas, surface, ink…) switch between the light paper theme and a warm dark variant.
+ * Theme "Pilot" (see the CareerPilot Redesign canvas): warm paper + indigo primary + marigold highlight
+ * in light mode, Notion-style neutral charcoal in dark mode.
+ * Semantic tokens (canvas, surface, ink…) and the legacy accent names all resolve to --cp-* variables,
+ * so every page follows the active theme.
  */
 @theme {
-  --color-notion-blue: #0075de;
-  --color-paper-warmth: #f6f5f4;
-  --color-sky-tint: #e6f3fe;
-  --color-marigold: #ffb110;
+  --color-notion-blue: var(--cp-primary);
+  --color-paper-warmth: var(--cp-canvas);
+  --color-sky-tint: var(--cp-primary-soft);
+  --color-marigold: var(--cp-marigold);
   --color-coral: #f64932;
   --color-saffron: #e89d01;
-  --color-vermillion: #e32d14;
+  --color-vermillion: var(--cp-danger);
   --color-mocha: #b18164;
-  --color-signal-blue: #097fe8;
+  --color-signal-blue: var(--cp-primary);
   --color-sky-wash: #62aef0;
-  --color-midnight-ink: #02093a;
+  --color-midnight-ink: var(--cp-hero);
   --color-peach: #f6d5b8;
-  --color-teal: #0f8a7e;
+  --color-teal: var(--cp-success);
 
   --color-canvas: var(--cp-canvas);
   --color-surface: var(--cp-surface);
@@ -33,9 +35,19 @@
   --color-line: var(--cp-line);
   --color-primary: var(--cp-primary);
   --color-primary-soft: var(--cp-primary-soft);
+  --color-primary-ink: var(--cp-primary-ink);
+  --color-accent-soft: var(--cp-accent-soft);
+  --color-accent-ink: var(--cp-accent-ink);
+  --color-success: var(--cp-success);
+  --color-success-soft: var(--cp-success-soft);
+  --color-rec: var(--cp-rec);
+  --color-rec-soft: var(--cp-rec-soft);
+  --color-stage: var(--cp-stage);
 
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  /* Pilot has no serif voice; older `font-serif` call sites render in the sans stack. */
+  --font-serif: var(--font-sans);
 
   --text-caption: 12px;
   --text-caption--line-height: 1.33;
@@ -56,38 +68,61 @@
   --text-display--line-height: 1.08;
   --text-display--letter-spacing: -2.016px;
 
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
 
   --shadow-nav: 0px 0.7px 1.462px 0px rgb(0 0 0 / 0.015), 0px 3px 9px 0px rgb(0 0 0 / 0.03);
   --shadow-mockup: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 :root {
-  --cp-canvas: #f6f5f4;
+  --cp-canvas: #f7f6f3;
   --cp-surface: #ffffff;
-  --cp-surface-2: #fbfaf9;
-  --cp-ink: rgba(0, 0, 0, 0.95);
-  --cp-ink-2: #615d59;
-  --cp-muted: rgba(0, 0, 0, 0.6);
-  --cp-faint: rgba(0, 0, 0, 0.4);
-  --cp-line: rgba(0, 0, 0, 0.08);
-  --cp-primary: #0075de;
-  --cp-primary-soft: #e6f3fe;
+  --cp-surface-2: #f1efea;
+  --cp-ink: #16161d;
+  --cp-ink-2: #4a4752;
+  --cp-muted: #5e5b66;
+  --cp-faint: #8a8792;
+  --cp-line: #e6e3dd;
+  --cp-primary: #3451d1;
+  --cp-primary-soft: #e9edff;
+  --cp-primary-ink: #2a41b0;
+  --cp-marigold: #ffb110;
+  --cp-accent-soft: #fff3d6;
+  --cp-accent-ink: #7a4f00;
+  --cp-success: #0e7a55;
+  --cp-success-soft: #e3f5ec;
+  --cp-danger: #c4320a;
+  --cp-rec: #d92d20;
+  --cp-rec-soft: #fdecea;
+  --cp-hero: #3451d1;
+  --cp-stage: #1b1e2b;
   color-scheme: light;
 }
+/* Dark: neutral charcoal like Notion — flat surfaces, warm off-white text, muted tags. */
 [data-theme='dark'] {
-  --cp-canvas: #191817;
-  --cp-surface: #232120;
-  --cp-surface-2: #1e1d1c;
-  --cp-ink: rgba(255, 255, 255, 0.92);
-  --cp-ink-2: #b7b1ab;
-  --cp-muted: rgba(255, 255, 255, 0.6);
-  --cp-faint: rgba(255, 255, 255, 0.4);
-  --cp-line: rgba(255, 255, 255, 0.09);
-  --cp-primary: #3a95ef;
-  --cp-primary-soft: rgba(58, 149, 239, 0.14);
+  --cp-canvas: #191919;
+  --cp-surface: #202020;
+  --cp-surface-2: #2a2a2a;
+  --cp-ink: #e3e2e0;
+  --cp-ink-2: #bdbbb8;
+  --cp-muted: #9b9a97;
+  --cp-faint: #6f6e6b;
+  --cp-line: #2f2f2f;
+  --cp-primary: #5a6fe0;
+  --cp-primary-soft: #28324f;
+  --cp-primary-ink: #aeb9f5;
+  --cp-marigold: #e3b341;
+  --cp-accent-soft: #3b3120;
+  --cp-accent-ink: #e9c46a;
+  --cp-success: #4dab9a;
+  --cp-success-soft: #243a31;
+  --cp-danger: #ff8a80;
+  --cp-rec: #e5483b;
+  --cp-rec-soft: #3e2522;
+  --cp-hero: #28324f;
+  --cp-stage: #141414;
   color-scheme: dark;
 }
 
@@ -99,12 +134,13 @@ body {
   font-feature-settings: 'lnum';
   -webkit-font-smoothing: antialiased;
 }
+h1, h2, h3 { font-family: var(--font-display); }
 ::selection { background: #ffb11055; }
 :focus-visible { outline: 2px solid var(--cp-primary); outline-offset: 2px; border-radius: 6px; }
 
-@utility card { background: var(--cp-surface); border: 1px solid var(--cp-line); border-radius: 12px; }
+@utility card { background: var(--cp-surface); border: 1px solid var(--cp-line); border-radius: 18px; }
 @utility hairline { border-color: var(--cp-line); }
-@utility font-display { font-weight: 600; letter-spacing: -0.02em; }
+@utility font-display { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; }
 
 .react-flow { --xy-background-color: transparent; }
 .react-flow__attribution { background: transparent !important; font-size: 10px; }

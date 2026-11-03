@@ -3,9 +3,10 @@ import { ArrowLeft, Check, Flag, Play, Quote, Sparkles, TrendingDown, TrendingUp
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router';
 import { AccentCard, AiMetaNote, Button, ButtonLink, Card, cx, DemoBadge, ErrorState, Field, Input, label, Loading, Notice, PageHeader, Pill, ScoreBar, Section, Select, Textarea } from '../components/ui';
+import { loadVoicePrefs, RecordingReplay, useMediaSession, VoiceLive, VoiceSetup, type VoicePrefs } from '../components/VoiceInterview';
 import { VoiceTextarea } from '../components/VoiceTextarea';
 import { api } from '../lib/api';
-import { useAction, useMeta } from '../lib/hooks';
+import { useAction, useMe, useMeta } from '../lib/hooks';
 
 interface Msg { id: number; seq: number; speaker: 'interviewer' | 'candidate'; kind: string; content: string; topicKey: string | null; difficulty: number | null; inputMode: string | null; rubricCriteria: string[] | null; idealPoints: string[] | null; generatedBy: string | null; options: { maxSelect: number; choices: { key: string; label: string }[] } | null; choices: string[] | null; evaluation: { score: number; criteria: { criterion: string; score: number; comment: string }[]; strengths: string[]; gaps: string[]; evidenceQuotes: string[]; method: string } | null }
 interface Topic { key: string; label: string; kind: string; priority: number; reason: string; covered: boolean; followUps: number }
@@ -22,11 +23,15 @@ export default function InterviewSession() {
   const current = q.data && [...q.data.messages].reverse().find((m) => m.speaker === 'interviewer');
   const inv = [['interview', id], ['interviews'], ['profile'], ['dashboard']];
   const start = useAction((background?: Background) => api.post(`/interviews/${id}/start`, { background }), inv);
-  const send = useAction(() => api.post<{ feedback: Msg['evaluation'] | null }>(`/interviews/${id}/answer`, { content: answer, inputMode, choices: current?.options ? choices : undefined }), inv, (r) => setLastFeedback(r.feedback));
+  const send = useAction((voiceAnswer?: string) => api.post<{ feedback: Msg['evaluation'] | null }>(`/interviews/${id}/answer`, voiceAnswer != null ? { content: voiceAnswer, inputMode: 'voice' } : { content: answer, inputMode, choices: current?.options ? choices : undefined }), inv, (r) => setLastFeedback(r.feedback));
   // Clear the answer as soon as the next question arrives — not after the refetch, which would wipe text typed in between.
   useEffect(() => { setAnswer(''); setChoices([]); }, [current?.id]);
   const finish = useAction(() => api.post(`/interviews/${id}/finish`), inv);
   const abandon = useAction(() => api.post(`/interviews/${id}/abandon`), inv);
+  const me = useMe();
+  // Voice sessions keep one camera/mic stream from the device check through the whole call.
+  const media = useMediaSession();
+  const [voicePrefs, setVoicePrefs] = useState<VoicePrefs | null>(() => loadVoicePrefs(Number(id)));
   if (q.isLoading) return <Loading rows={4} />;
   if (q.error) return <ErrorState error={q.error} retry={q.refetch} />;
   const d = q.data!;
@@ -35,16 +40,44 @@ export default function InterviewSession() {
   const asked = d.messages.filter((m) => m.kind === 'question').length;
   const discovery = s.mode === 'discovery';
   const title = discovery ? 'Career discovery' : `${label(s.roundType)} interview`;
+  const voice = s.answerMode === 'voice' && !discovery;
+  const voiceLive = voice && s.status === 'in_progress' && !!current && !current.options;
+  const langLabel = s.language === 'vi' ? 'Tiếng Việt' : 'English';
+  const topicLabel = (key: string | null) => s.blueprint.topics.find((t) => t.key === key)?.label;
+
+  if (voiceLive && current) {
+    const history = d.messages.filter((m) => m.id !== current.id && m.content).map((m) => ({ id: m.id, speaker: m.speaker, content: m.content }));
+    return (
+      <VoiceLive
+        sessionId={s.id} language={s.language} title={`${d.role?.name ?? d.job?.title ?? 'Mock'} · ${title}`} subtitle={`${s.seniority} · ${s.durationMinutes} min · ${langLabel}`}
+        question={{ id: current.id, content: current.content, kind: current.kind, topicLabel: topicLabel(current.topicKey), rubricCriteria: current.rubricCriteria }}
+        questionNumber={Math.max(1, asked)} maxQuestions={Math.max(asked, s.blueprint.maxMainQuestions)} history={history}
+        media={media} prefs={voicePrefs ?? { mode: 'none', voiceURI: null }}
+        sending={send.isPending} sendError={send.error as Error | null}
+        feedback={lastFeedback && s.mode === 'focused' ? <Card className="p-5"><div className="mb-2 font-semibold">Last answer · {Math.round(lastFeedback.score * 100)}%</div><ul className="flex flex-col gap-1 text-body-sm">{lastFeedback.criteria.map((c) => <li key={c.criterion}><b>{c.criterion}</b> {c.score}/4 — {c.comment}</li>)}</ul></Card> : null}
+        onSubmit={(text) => send.mutate(text)} finishing={finish.isPending} onFinish={() => finish.mutate(undefined)} onAbandon={() => abandon.mutate(undefined)}
+      />
+    );
+  }
 
   return (
     <>
       <Link to="/interviews" className="mb-4 inline-flex items-center gap-1 text-body-sm text-muted hover:text-ink"><ArrowLeft className="size-4" />Interviews</Link>
-      <PageHeader eyebrow={<span className="flex items-center gap-2">{d.role?.name ?? 'Discovery'}{d.job && <> · {d.job.title} — {d.job.company} {d.job.isDemo && <DemoBadge />}</>}</span>} title={title} subtitle={discovery ? `Multiple choice · ${s.language === 'vi' ? 'Tiếng Việt' : 'English'}` : `${s.seniority} · ${s.durationMinutes} min · ${s.language === 'vi' ? 'Tiếng Việt' : 'English'} · ${s.answerMode} answers`}
+      <PageHeader eyebrow={<span className="flex items-center gap-2">{d.role?.name ?? 'Discovery'}{d.job && <> · {d.job.title} — {d.job.company} {d.job.isDemo && <DemoBadge />}</>}</span>} title={title} subtitle={discovery ? `Multiple choice · ${langLabel}` : `${s.seniority} · ${s.durationMinutes} min · ${langLabel} · ${voice ? 'voice call' : `${s.answerMode} answers`}`}
         actions={s.status === 'in_progress' && <><Button variant="text" icon={<Flag className="size-4" />} loading={finish.isPending} onClick={() => finish.mutate(undefined)}>End & get report</Button><Button variant="text" onClick={() => window.confirm('Abandon this session?') && abandon.mutate(undefined)}>Abandon</Button></>} />
 
       {s.status === 'planned' && discovery && <BackgroundStep starting={start.isPending} error={start.error as Error | null} onStart={(b) => start.mutate(b)} />}
 
-      {s.status === 'planned' && !discovery && (
+      {s.status === 'planned' && voice && (
+        <VoiceSetup
+          sessionId={s.id} language={s.language} name={me.data?.displayName.split(' ')[0]}
+          chips={[d.role?.name ?? d.job?.title ?? 'Mock interview', `${label(s.roundType)} round`, `~${s.durationMinutes} min · up to ${s.blueprint.maxMainQuestions} questions`, langLabel]}
+          topics={s.blueprint.topics} media={media} starting={start.isPending} error={start.error as Error | null}
+          onJoin={(p) => { setVoicePrefs(p); start.mutate(undefined); }}
+        />
+      )}
+
+      {s.status === 'planned' && !discovery && !voice && (
         <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
           <Card>
             <div className="mb-1 text-heading-sm font-semibold">Interview blueprint</div>
@@ -95,7 +128,7 @@ export default function InterviewSession() {
         </div>
       )}
 
-      {(s.status === 'completed' || s.status === 'abandoned') && <ReportView d={d} />}
+      {(s.status === 'completed' || s.status === 'abandoned') && <><RecordingReplay sessionId={s.id} /><ReportView d={d} /></>}
     </>
   );
 }

@@ -6,14 +6,14 @@ import { Link } from 'react-router';
 export const cx = clsx;
 
 // ---------------------------------------------------------------------------
-// Buttons (DESIGN.md: one filled blue primary per view; ghost/text/outline otherwise)
+// Buttons (Pilot: one filled indigo primary per view; ghost/text/outline otherwise)
 // ---------------------------------------------------------------------------
 type Variant = 'primary' | 'ghost' | 'text' | 'outline' | 'danger';
 const VARIANTS: Record<Variant, string> = {
-  primary: 'bg-primary text-white hover:brightness-110 rounded-md',
-  ghost: 'bg-primary-soft text-primary hover:brightness-[0.97] rounded-md',
+  primary: 'bg-primary text-white hover:brightness-110 rounded-md font-semibold',
+  ghost: 'bg-primary-soft text-primary-ink hover:brightness-[0.97] rounded-md',
   text: 'bg-transparent text-ink hover:bg-black/5 dark:hover:bg-white/5 rounded-md',
-  outline: 'bg-transparent text-ink border border-current/30 hover:border-current/60 rounded-sm',
+  outline: 'bg-surface text-ink border border-line hover:border-primary/50 rounded-md',
   danger: 'bg-transparent text-vermillion border border-vermillion/40 hover:bg-vermillion/5 rounded-md',
 };
 export function Button({ variant = 'text', loading, className, children, icon, ...rest }: ButtonHTMLAttributes<HTMLButtonElement> & { variant?: Variant; loading?: boolean; icon?: ReactNode }) {
@@ -21,7 +21,7 @@ export function Button({ variant = 'text', loading, className, children, icon, .
     <button
       {...rest}
       disabled={rest.disabled || loading}
-      className={cx('inline-flex items-center justify-center gap-1.5 px-[15px] py-[6px] text-body-sm font-medium transition-all duration-200 ease-out disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer whitespace-nowrap', VARIANTS[variant], className)}
+      className={cx('inline-flex min-h-10 items-center justify-center gap-1.5 px-4 py-2 text-body-sm font-medium transition-all duration-200 ease-out disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer whitespace-nowrap', VARIANTS[variant], className)}
     >
       {loading ? <Loader2 className="size-4 animate-spin" /> : icon}
       {children}
@@ -29,7 +29,7 @@ export function Button({ variant = 'text', loading, className, children, icon, .
   );
 }
 export function ButtonLink({ to, variant = 'text', className, children, icon, external }: { to: string; variant?: Variant; className?: string; children: ReactNode; icon?: ReactNode; external?: boolean }) {
-  const cls = cx('inline-flex items-center justify-center gap-1.5 px-[15px] py-[6px] text-body-sm font-medium transition-all duration-200', VARIANTS[variant], className);
+  const cls = cx('inline-flex min-h-10 items-center justify-center gap-1.5 px-4 py-2 text-body-sm font-medium transition-all duration-200', VARIANTS[variant], className);
   if (external) return <a href={to} target="_blank" rel="noopener noreferrer" className={cls}>{icon}{children}</a>;
   return <Link to={to} className={cls}>{icon}{children}</Link>;
 }
@@ -41,27 +41,27 @@ export function Card({ className, children, padded = true, ...rest }: { classNam
   return <div {...rest} className={cx('card', padded && 'p-6', className)}>{children}</div>;
 }
 const ACCENTS = {
-  marigold: 'bg-marigold text-black',
+  marigold: 'bg-accent-soft text-ink',
   coral: 'bg-coral text-white',
   sky: 'bg-sky-wash text-black',
-  tint: 'bg-sky-tint text-black dark:bg-primary-soft dark:text-ink',
+  tint: 'bg-primary-soft text-ink',
   midnight: 'bg-midnight-ink text-white',
   peach: 'bg-peach text-black',
 } as const;
 export function AccentCard({ tone, className, children }: { tone: keyof typeof ACCENTS; className?: string; children: ReactNode }) {
-  return <div className={cx('rounded-lg p-6', ACCENTS[tone], className)}>{children}</div>;
+  return <div className={cx('rounded-[20px] p-6', ACCENTS[tone], className)}>{children}</div>;
 }
 
 export function PageHeader({ title, highlight, subtitle, actions, eyebrow }: { title: ReactNode; highlight?: string; subtitle?: ReactNode; actions?: ReactNode; eyebrow?: ReactNode }) {
   return (
     <header className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
       <div className="max-w-3xl">
-        {eyebrow && <div className="mb-2 text-caption font-medium uppercase tracking-wider text-muted">{eyebrow}</div>}
-        <h1 className="text-[34px] leading-[1.1] font-semibold tracking-[-0.03em] md:text-[42px]">
+        {eyebrow && <div className="mb-2 text-body-sm font-semibold text-primary-ink">{eyebrow}</div>}
+        <h1 className="font-display text-[30px] leading-[1.1] font-extrabold tracking-[-0.025em] md:text-[36px]">
           {title}
-          {highlight && <> <span className="inline-block rounded-full bg-peach px-4 py-0.5 text-black">{highlight}</span></>}
+          {highlight && <> <span className="inline-block rounded-full bg-accent-soft px-4 py-0.5 text-accent-ink">{highlight}</span></>}
         </h1>
-        {subtitle && <p className="mt-3 font-serif text-[18px] leading-[1.56] text-ink-2">{subtitle}</p>}
+        {subtitle && <p className="mt-3 text-body leading-[1.55] text-muted">{subtitle}</p>}
       </div>
       {actions && <div className="flex flex-wrap gap-2">{actions}</div>}
     </header>
@@ -88,10 +88,10 @@ export function Section({ title, description, actions, children, className }: { 
 // ---------------------------------------------------------------------------
 const PILL = {
   neutral: 'bg-black/[0.05] text-ink dark:bg-white/10',
-  blue: 'bg-sky-tint text-[#005bb0] dark:bg-primary-soft dark:text-primary',
-  yellow: 'bg-marigold/25 text-[#7a4f00] dark:text-marigold',
-  red: 'bg-coral/15 text-vermillion',
-  green: 'bg-teal/12 text-teal',
+  blue: 'bg-primary-soft text-primary-ink',
+  yellow: 'bg-accent-soft text-accent-ink',
+  red: 'bg-rec-soft text-vermillion',
+  green: 'bg-success-soft text-success',
   dark: 'bg-midnight-ink text-white',
   peach: 'bg-peach text-black',
 } as const;
@@ -119,7 +119,7 @@ export function DemoBadge() {
 export function AiMetaNote({ meta }: { meta?: { mode: string; provider: string; model?: string | null; fallbackReason?: string } | null }) {
   if (!meta) return null;
   if (meta.mode === 'ai') return <span className="inline-flex items-center gap-1 text-caption text-muted"><Bot className="size-3" />AI · {meta.provider}{meta.model ? ` (${meta.model})` : ''}</span>;
-  return <span className="inline-flex items-center gap-1 text-caption text-[#7a4f00] dark:text-marigold" title={meta.fallbackReason}><Info className="size-3" />Heuristic mode{meta.fallbackReason ? ` — ${meta.fallbackReason}` : ''}</span>;
+  return <span className="inline-flex items-center gap-1 text-caption text-accent-ink" title={meta.fallbackReason}><Info className="size-3" />Heuristic mode{meta.fallbackReason ? ` — ${meta.fallbackReason}` : ''}</span>;
 }
 
 // ---------------------------------------------------------------------------
@@ -195,7 +195,7 @@ export function EmptyState({ icon, title, children, action }: { icon?: ReactNode
   );
 }
 export function Notice({ tone = 'info', children, className }: { tone?: 'info' | 'warn' | 'demo'; children: ReactNode; className?: string }) {
-  const cls = { info: 'bg-sky-tint text-[#0a3a66] dark:bg-primary-soft dark:text-ink', warn: 'bg-marigold/20 text-[#5c3b00] dark:text-marigold', demo: 'bg-peach/70 text-black' }[tone];
+  const cls = { info: 'bg-primary-soft text-ink', warn: 'bg-accent-soft text-ink [&>svg]:text-accent-ink', demo: 'bg-peach/70 text-black' }[tone];
   return <div className={cx('flex items-start gap-2 rounded-md px-4 py-3 text-body-sm', cls, className)}>{tone === 'demo' ? <FlaskConical className="mt-0.5 size-4 shrink-0" /> : <Info className="mt-0.5 size-4 shrink-0" />}<div>{children}</div></div>;
 }
 export function Hint({ children }: { children: ReactNode }) {

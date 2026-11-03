@@ -27,7 +27,7 @@ export function ProgressRing({ value, total, size = 28 }: { value: number; total
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden className="-rotate-90">
       <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--cp-line)" strokeWidth="3" />
-      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#0075de" strokeWidth="3" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - value / Math.max(1, total))} className="transition-all duration-500" />
+      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="var(--cp-primary)" strokeWidth="3" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - value / Math.max(1, total))} className="transition-all duration-500" />
     </svg>
   );
 }

@@ -52,7 +52,7 @@ export default function ApplicationDetail() {
       <Card className="mb-6">
         <div className="flex flex-wrap items-center gap-1" role="group" aria-label="Stage">
           {STAGES.map((st, i) => (
-            <button key={st} disabled={change.isPending} onClick={() => (st === 'closed' ? setClosing({ id: a.id }) : st !== a.stage && change.mutate({ id: a.id, stage: st }))} className={cx('rounded-full px-3 py-1 text-body-sm font-medium transition-colors', st === a.stage ? 'bg-primary text-white' : i < stageIdx ? 'bg-sky-tint text-[#005bb0] dark:bg-primary-soft dark:text-primary' : 'bg-black/[0.04] text-muted hover:text-ink dark:bg-white/5')}>{label(st)}</button>
+            <button key={st} disabled={change.isPending} onClick={() => (st === 'closed' ? setClosing({ id: a.id }) : st !== a.stage && change.mutate({ id: a.id, stage: st }))} className={cx('rounded-full px-3 py-1 text-body-sm font-medium transition-colors', st === a.stage ? 'bg-primary text-white' : i < stageIdx ? 'bg-sky-tint text-primary-ink dark:bg-primary-soft dark:text-primary' : 'bg-black/[0.04] text-muted hover:text-ink dark:bg-white/5')}>{label(st)}</button>
           ))}
           {a.outcome && <Pill tone={a.outcome === 'accepted' ? 'green' : 'red'} className="ml-2">Outcome: {label(a.outcome)}</Pill>}
         </div>

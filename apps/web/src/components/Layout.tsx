@@ -1,6 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query';
 import {
-  BookOpenCheck, Briefcase, ChartLine, ClipboardCheck, Compass, FileText, GraduationCap, LayoutDashboard, LogOut, Menu, MessagesSquare,
+  BookOpenCheck, Briefcase, ChartLine, ClipboardCheck, Compass, FileText, GraduationCap, LayoutDashboard, LogOut, Menu, Mic,
   Moon, Network, Settings, Sun, Target, User, X,
 } from 'lucide-react';
 import { Suspense, useState, type ReactNode } from 'react';
@@ -10,7 +10,7 @@ import { useMe, useMeta, useTheme } from '../lib/hooks';
 import { GuideBar, SidebarGuide } from './Guide';
 import { cx, Loading, Pill } from './ui';
 
-const NAV: { group: string; items: { to: string; label: string; icon: ReactNode }[] }[] = [
+const NAV: { group: string; items: { to: string; label: string; icon: ReactNode; badge?: string }[] }[] = [
   { group: '', items: [{ to: '/dashboard', label: 'Dashboard', icon: <LayoutDashboard className="size-4" /> }] },
   { group: 'Explore', items: [
     { to: '/atlas', label: 'Career Atlas', icon: <Compass className="size-4" /> },
@@ -24,7 +24,7 @@ const NAV: { group: string; items: { to: string; label: string; icon: ReactNode 
   { group: 'Grow', items: [
     { to: '/learning', label: 'Learning Plan', icon: <GraduationCap className="size-4" /> },
     { to: '/assessments', label: 'Assessments', icon: <ClipboardCheck className="size-4" /> },
-    { to: '/interviews', label: 'Mock Interviews', icon: <MessagesSquare className="size-4" /> },
+    { to: '/interviews', label: 'Mock Interviews', icon: <Mic className="size-4" />, badge: 'Voice' },
   ] },
   { group: 'Apply', items: [
     { to: '/jobs', label: 'Jobs', icon: <Briefcase className="size-4" /> },
@@ -36,11 +36,13 @@ const NAV: { group: string; items: { to: string; label: string; icon: ReactNode 
 export function Logo() {
   return (
     <div className="flex items-center gap-2">
-      <svg viewBox="0 0 32 32" className="size-7" aria-hidden><rect width="32" height="32" rx="8" fill="#0075de" /><path d="M9 21l7-11 7 11" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" /><circle cx="16" cy="22" r="2.2" fill="#ffb110" /></svg>
-      <span className="text-[17px] font-semibold tracking-tight">CareerPilot</span>
+      <svg viewBox="0 0 32 32" className="size-7" aria-hidden><rect width="32" height="32" rx="8" fill="var(--cp-primary)" /><path d="M9 21l7-11 7 11" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" /><circle cx="16" cy="22" r="2.2" fill="#ffb110" /></svg>
+      <span className="font-display text-[17px] font-bold tracking-tight">CareerPilot</span>
     </div>
   );
 }
+
+const navCls = (active: boolean) => cx('flex min-h-10 items-center gap-3 rounded-[10px] px-3 text-body-sm transition-colors duration-200', active ? 'bg-primary-soft font-semibold text-primary-ink' : 'font-medium text-muted hover:bg-black/[0.04] hover:text-ink dark:hover:bg-white/5');
 
 function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
   return (
@@ -49,16 +51,17 @@ function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
       <SidebarGuide onNavigate={onNavigate} />
       {NAV.map((g) => (
         <div key={g.group || 'root'} className="flex flex-col gap-0.5">
-          {g.group && <div className="px-3 pb-1 text-caption font-medium uppercase tracking-wider text-faint">{g.group}</div>}
+          {g.group && <div className="px-3 pb-1 text-caption font-semibold uppercase tracking-wider text-muted">{g.group}</div>}
           {g.items.map((it) => (
-            <NavLink key={it.to} to={it.to} onClick={onNavigate} className={({ isActive }) => cx('flex items-center gap-2.5 rounded-md px-3 py-1.5 text-body-sm font-medium transition-colors duration-200', isActive ? 'bg-surface text-ink shadow-nav [&>svg]:text-primary' : 'text-muted hover:text-ink hover:bg-black/[0.03] dark:hover:bg-white/5')}>
-              {it.icon}{it.label}
+            <NavLink key={it.to} to={it.to} onClick={onNavigate} className={({ isActive }) => navCls(isActive)}>
+              {it.icon}<span className="flex-1">{it.label}</span>
+              {it.badge && <span className="rounded-full bg-accent-soft px-2 py-0.5 text-[11px] font-bold uppercase text-accent-ink">{it.badge}</span>}
             </NavLink>
           ))}
         </div>
       ))}
       <div className="mt-auto">
-        <NavLink to="/settings" onClick={onNavigate} className={({ isActive }) => cx('flex items-center gap-2.5 rounded-md px-3 py-1.5 text-body-sm font-medium', isActive ? 'bg-surface text-ink shadow-nav' : 'text-muted hover:text-ink')}>
+        <NavLink to="/settings" onClick={onNavigate} className={({ isActive }) => navCls(isActive)}>
           <Settings className="size-4" />Settings
         </NavLink>
       </div>
@@ -83,7 +86,7 @@ export function AppShell() {
   return (
     <div className="flex min-h-screen">
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded-md focus:bg-surface focus:px-3 focus:py-2">Skip to content</a>
-      <aside className="sticky top-0 hidden h-screen w-60 shrink-0 border-r border-line lg:block"><Sidebar /></aside>
+      <aside className="sticky top-0 hidden h-screen w-64 shrink-0 border-r border-line lg:block"><Sidebar /></aside>
       {open && (
         <div className="fixed inset-0 z-40 bg-black/30 lg:hidden" onClick={() => setOpen(false)}>
           <aside className="h-full w-64 bg-canvas" onClick={(e) => e.stopPropagation()}><Sidebar onNavigate={() => setOpen(false)} /></aside>
